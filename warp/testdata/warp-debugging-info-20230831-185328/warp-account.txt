@@ -1,0 +1,5 @@
+Account type: Team
+Device ID: 81bb50a9-47e0-11ee-b68c-32b1f45490fe
+Public key: a65e2ca712c14fd8519066d205ddc8a6153e98a8310f821a1e9ae90153e28421
+Account ID: e5acfa2c8052dfa4c2d4f67222dd0016
+Organization: erichlab

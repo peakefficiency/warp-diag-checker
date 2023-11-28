@@ -1,0 +1,714 @@
+2023-08-29T23:01:52.877Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-29T23:01:52.879Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:01:53.329Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-29T23:01:53.330Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:01:54.294Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:04:16.931Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-29T23:04:16.939Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:04:17.369Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-29T23:04:17.371Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:04:18.360Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:19:45.676Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-29T23:19:45.680Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:19:46.194Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-29T23:19:46.196Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:19:47.166Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:37:48.652Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-29T23:37:48.660Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:37:49.112Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-29T23:37:49.116Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:37:50.117Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:54:12.648Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-29T23:54:12.651Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:54:13.118Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-29T23:54:13.122Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-29T23:54:14.121Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:09:39.642Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T00:09:39.646Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:09:40.113Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T00:09:40.118Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:09:41.119Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:10:09.961Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T00:10:09.968Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:10:10.378Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T00:10:10.380Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:10:11.376Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:17:44.391Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T00:17:44.394Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:17:44.886Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T00:17:44.887Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:17:45.856Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:52:33.668Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T00:52:33.671Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:52:34.185Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T00:52:34.188Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T00:52:35.150Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:08:41.660Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T01:08:41.665Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:08:42.142Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T01:08:42.143Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:08:43.122Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:25:44.670Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T01:25:44.676Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:25:45.161Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T01:25:45.164Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:25:46.142Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:42:28.674Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T01:42:28.679Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:42:29.176Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T01:42:29.178Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:42:30.153Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:58:10.690Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T01:58:10.694Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:58:11.169Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T01:58:11.170Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T01:58:12.147Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:15:24.702Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T02:15:24.705Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:15:25.177Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T02:15:25.223Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:15:26.182Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:33:08.770Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T02:33:08.776Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:33:09.203Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T02:33:09.204Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:33:10.185Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:48:41.745Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T02:48:41.749Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:48:42.248Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T02:48:42.250Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:48:43.214Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:54:26.817Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T02:54:26.820Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:54:27.288Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T02:54:27.289Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T02:54:28.268Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T03:10:36.774Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T03:10:36.777Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T03:10:37.278Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T03:10:37.280Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T03:10:38.247Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T04:16:36.110Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T04:16:36.113Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T04:16:36.564Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T04:16:36.565Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T04:16:37.535Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T04:34:20.782Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T04:34:20.788Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T04:34:21.240Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T04:34:21.242Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T04:34:22.226Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T04:50:55.744Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T04:50:55.747Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T04:50:56.212Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T04:50:56.213Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T04:50:57.194Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:06:51.756Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T05:06:51.760Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:06:52.182Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T05:06:52.184Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:06:53.163Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:23:08.742Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T05:23:08.746Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:23:09.269Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T05:23:09.270Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:23:10.245Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:38:59.813Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T05:38:59.819Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:39:00.231Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T05:39:00.234Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:39:01.214Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:55:52.795Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T05:55:52.799Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:55:53.312Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T05:55:53.314Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T05:55:54.287Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:00:57.128Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T06:00:57.134Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:00:57.555Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T06:00:57.592Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:00:58.557Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:18:56.800Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T06:18:56.804Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:18:57.290Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T06:18:57.296Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:18:58.269Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:36:57.819Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T06:36:57.825Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:36:58.262Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T06:36:58.264Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:36:59.255Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:52:32.818Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T06:52:32.822Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:52:33.278Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T06:52:33.280Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:52:34.241Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:54:12.624Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T06:54:12.627Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:54:13.064Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T06:54:13.066Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:54:14.056Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:58:25.935Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T06:58:25.939Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:58:25.941Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T06:58:25.941Z DEBUG main_loop: warp::warp_service: Power status: SystemWillWake
+2023-08-30T06:58:26.075Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T06:58:26.075Z DEBUG main_loop: warp::warp_service: Power status: SystemDidWake
+2023-08-30T06:58:26.501Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T06:58:26.502Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T06:58:27.463Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T07:03:46.014Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T07:03:46.014Z DEBUG main_loop: warp::warp_service: Power status: SystemWillSleep
+2023-08-30T07:19:40.275Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T07:19:40.276Z DEBUG main_loop: warp::warp_service: Power status: SystemWillWake
+2023-08-30T07:19:40.299Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T07:19:40.302Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T07:19:40.419Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T07:19:40.419Z DEBUG main_loop: warp::warp_service: Power status: SystemDidWake
+2023-08-30T07:19:40.785Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T07:19:40.786Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T07:19:41.784Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T07:31:18.136Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T07:31:18.136Z DEBUG main_loop: warp::warp_service: Power status: SystemWillSleep
+2023-08-30T07:47:42.563Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T07:47:42.571Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T07:47:43.083Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T07:47:43.140Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T07:47:44.090Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:03:50.878Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T08:03:50.881Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:03:51.395Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T08:03:51.397Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:03:52.366Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:19:26.885Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T08:19:26.889Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:19:27.350Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T08:19:27.355Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:19:28.354Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:35:14.650Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T08:35:14.659Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:35:14.661Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T08:35:14.661Z DEBUG main_loop: warp::warp_service: Power status: SystemWillWake
+2023-08-30T08:35:14.800Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T08:35:14.800Z DEBUG main_loop: warp::warp_service: Power status: SystemDidWake
+2023-08-30T08:35:15.366Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T08:35:15.367Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:35:15.901Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::fc98:1cff:fe9b:538e; Gateway: Interface 13 ; 
+2023-08-30T08:35:16.341Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:35:17.316Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::d486:6aff:fefb:3026; Gateway: Interface 13 ; 
+2023-08-30T08:35:19.183Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::fc98:1cff:fe9b:538e; Gateway: Interface 13 ; 
+2023-08-30T08:35:19.186Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::d486:6aff:fefb:3026; Gateway: Interface 13 ; 
+2023-08-30T08:35:19.203Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:d::dc8e:35ff:feca:a9ac; Gateway: Interface 13 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::dc8e:35ff:feca:a9ac; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::9cdf:2eff:fe98:b848; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:d::9cdf:2eff:fe98:b848; Gateway: Interface 13 ; 
+2023-08-30T08:35:19.218Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:e::dc8e:35ff:feca:a9ac; Gateway: Interface 14 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::dc8e:35ff:feca:a9ac; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::9cdf:2eff:fe98:b848; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:e::9cdf:2eff:fe98:b848; Gateway: Interface 14 ; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::9cdf:2eff:fe98:b848; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::9cdf:2eff:fe98:b848; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::9cdf:2eff:fe98:b848; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::9cdf:2eff:fe98:b848; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::9cdf:2eff:fe98:b848; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::9cdf:2eff:fe98:b848; 
+2023-08-30T08:35:19.219Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T08:35:20.207Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T09:28:05.368Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::5c31:98ff:fe2e:1baa; Gateway: Interface 13 ; 
+2023-08-30T09:32:07.899Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::5c31:98ff:fe2e:1baa; Gateway: Interface 13 ; 
+2023-08-30T09:32:07.921Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:d::9cdf:2eff:fe98:b848; Gateway: Interface 13 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::9cdf:2eff:fe98:b848; 
+2023-08-30T09:32:07.934Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::bc1f:e6ff:fe13:ef95; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:d::bc1f:e6ff:fe13:ef95; Gateway: Interface 13 ; 
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:e::9cdf:2eff:fe98:b848; Gateway: Interface 14 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::9cdf:2eff:fe98:b848; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::bc1f:e6ff:fe13:ef95; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:e::bc1f:e6ff:fe13:ef95; Gateway: Interface 14 ; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::bc1f:e6ff:fe13:ef95; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::bc1f:e6ff:fe13:ef95; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::bc1f:e6ff:fe13:ef95; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::bc1f:e6ff:fe13:ef95; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::bc1f:e6ff:fe13:ef95; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::bc1f:e6ff:fe13:ef95; 
+2023-08-30T09:32:07.936Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T09:32:08.927Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T09:46:11.009Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.1; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.100; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.103; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.104; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.106; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.107; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.108; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.110; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.112; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.113; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.121; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.122; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.125; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.129; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.130; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 54657092-(HOST | DONE | WASCLONED | BROADCAST | IFSCOPE | CONDEMNED); Destination: 192.168.20.255; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+2023-08-30T10:39:55.042Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:d::bc1f:e6ff:fe13:ef95; Gateway: Interface 13 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::bc1f:e6ff:fe13:ef95; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::1459:b6ff:fec1:9bdf; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:d::1459:b6ff:fec1:9bdf; Gateway: Interface 13 ; 
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:e::bc1f:e6ff:fe13:ef95; Gateway: Interface 14 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::bc1f:e6ff:fe13:ef95; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::1459:b6ff:fec1:9bdf; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:e::1459:b6ff:fec1:9bdf; Gateway: Interface 14 ; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::1459:b6ff:fec1:9bdf; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::1459:b6ff:fec1:9bdf; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::1459:b6ff:fec1:9bdf; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::1459:b6ff:fec1:9bdf; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::1459:b6ff:fec1:9bdf; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::1459:b6ff:fec1:9bdf; 
+2023-08-30T10:39:55.043Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T10:39:56.036Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T10:48:18.582Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.1; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.100; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.101; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.106; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.107; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.110; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.112; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.121; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.125; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.129; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 54657092-(HOST | DONE | WASCLONED | BROADCAST | IFSCOPE | CONDEMNED); Destination: 192.168.20.255; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+2023-08-30T10:50:00.889Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T10:50:00.889Z DEBUG main_loop: warp::warp_service: Power status: SystemWillSleep
+2023-08-30T10:58:55.630Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T10:58:55.631Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T10:58:55.632Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T10:58:55.632Z DEBUG main_loop: warp::warp_service: Power status: SystemWillWake
+2023-08-30T10:58:55.748Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T10:58:55.748Z DEBUG main_loop: warp::warp_service: Power status: SystemDidWake
+2023-08-30T10:58:56.123Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T10:58:56.129Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T10:58:57.126Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T10:59:00.342Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::d486:6aff:fefb:3026; Gateway: Interface 13 ; 
+2023-08-30T10:59:00.915Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::fc98:1cff:fe9b:538e; Gateway: Interface 13 ; 
+2023-08-30T10:59:03.649Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::fc98:1cff:fe9b:538e; Gateway: Interface 13 ; 
+2023-08-30T10:59:03.651Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::d486:6aff:fefb:3026; Gateway: Interface 13 ; 
+2023-08-30T10:59:03.670Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:d::1459:b6ff:fec1:9bdf; Gateway: Interface 13 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::1459:b6ff:fec1:9bdf; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::ec:98ff:fec7:b4d7; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:d::ec:98ff:fec7:b4d7; Gateway: Interface 13 ; 
+2023-08-30T10:59:03.683Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:e::1459:b6ff:fec1:9bdf; Gateway: Interface 14 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::1459:b6ff:fec1:9bdf; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::ec:98ff:fec7:b4d7; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:e::ec:98ff:fec7:b4d7; Gateway: Interface 14 ; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::ec:98ff:fec7:b4d7; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::ec:98ff:fec7:b4d7; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::ec:98ff:fec7:b4d7; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::ec:98ff:fec7:b4d7; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::ec:98ff:fec7:b4d7; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::ec:98ff:fec7:b4d7; 
+2023-08-30T10:59:03.684Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T10:59:04.674Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:03:07.274Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T12:03:07.274Z DEBUG main_loop: warp::warp_service: Power status: SystemWillSleep
+2023-08-30T12:03:22.096Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T12:03:22.105Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:03:22.522Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T12:03:22.524Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:03:23.512Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:03:36.072Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T12:03:36.074Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:03:36.545Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T12:03:36.546Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:03:37.537Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:21:20.927Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T12:21:20.932Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:21:21.434Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T12:21:21.436Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:21:22.410Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:37:45.948Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T12:37:45.951Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:37:46.502Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T12:37:46.504Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:37:47.476Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:44:04.644Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T12:44:04.648Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:44:05.173Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T12:44:05.176Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T12:44:06.140Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T13:43:04.815Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T13:43:04.899Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T13:43:05.046Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T13:43:05.046Z DEBUG main_loop: warp::warp_service: Power status: SystemWillWake
+2023-08-30T13:43:05.046Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T13:43:05.046Z DEBUG main_loop: warp::warp_service: Power status: SystemDidWake
+2023-08-30T13:43:05.227Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T13:43:05.229Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T13:43:06.153Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T13:43:07.108Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::fc98:1cff:fe9b:538e; Gateway: Interface 13 ; 
+2023-08-30T13:43:10.264Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:d::ec:98ff:fec7:b4d7; Gateway: Interface 13 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::ec:98ff:fec7:b4d7; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::5439:84ff:fe16:cbbf; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:d::5439:84ff:fe16:cbbf; Gateway: Interface 13 ; 
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:e::ec:98ff:fec7:b4d7; Gateway: Interface 14 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::ec:98ff:fec7:b4d7; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::5439:84ff:fe16:cbbf; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:e::5439:84ff:fe16:cbbf; Gateway: Interface 14 ; 
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::fc98:1cff:fe9b:538e; Gateway: Interface 13 ; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::5439:84ff:fe16:cbbf; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::5439:84ff:fe16:cbbf; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::5439:84ff:fe16:cbbf; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::5439:84ff:fe16:cbbf; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::5439:84ff:fe16:cbbf; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::5439:84ff:fe16:cbbf; 
+2023-08-30T13:43:10.267Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T13:43:11.256Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T13:53:50.722Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T13:53:50.722Z DEBUG main_loop: warp::warp_service: Power status: SystemWillSleep
+2023-08-30T14:09:19.973Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T14:09:19.980Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T14:09:20.429Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T14:09:20.472Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T14:09:21.434Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T14:45:17.936Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T14:45:17.936Z DEBUG main_loop: warp::warp_service: Power status: SystemWillWake
+2023-08-30T14:45:17.990Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T14:45:18.120Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T14:45:18.124Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T14:45:18.124Z DEBUG main_loop: warp::warp_service: Power status: SystemDidWake
+2023-08-30T14:45:18.396Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T14:45:18.415Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T14:45:19.136Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::fc98:1cff:fe9b:538e; Gateway: Interface 13 ; 
+2023-08-30T14:45:19.459Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T14:45:20.763Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::d486:6aff:fefb:3026; Gateway: Interface 13 ; 
+2023-08-30T14:45:29.966Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::d486:6aff:fefb:3026; Gateway: Interface 13 ; 
+2023-08-30T14:45:29.968Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::fc98:1cff:fe9b:538e; Gateway: Interface 13 ; 
+2023-08-30T14:45:29.997Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:d::5439:84ff:fe16:cbbf; Gateway: Interface 13 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::5439:84ff:fe16:cbbf; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::98c2:9ff:fe93:5321; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:d::98c2:9ff:fe93:5321; Gateway: Interface 13 ; 
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:e::5439:84ff:fe16:cbbf; Gateway: Interface 14 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::5439:84ff:fe16:cbbf; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::98c2:9ff:fe93:5321; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:e::98c2:9ff:fe93:5321; Gateway: Interface 14 ; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::98c2:9ff:fe93:5321; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::98c2:9ff:fe93:5321; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::98c2:9ff:fe93:5321; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::98c2:9ff:fe93:5321; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::98c2:9ff:fe93:5321; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::98c2:9ff:fe93:5321; 
+2023-08-30T14:45:29.998Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T14:45:30.992Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T15:56:16.980Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::601f:fff:fec7:ab6b; Gateway: Interface 13 ; 
+2023-08-30T15:59:10.857Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::d486:6aff:fefb:3026; Gateway: Interface 13 ; 
+2023-08-30T15:59:24.366Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::d486:6aff:fefb:3026; Gateway: Interface 13 ; 
+2023-08-30T15:59:26.459Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.1; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.100; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.106; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.107; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.110; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.112; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.121; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.122; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.125; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.129; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 54657092-(HOST | DONE | WASCLONED | BROADCAST | IFSCOPE | CONDEMNED); Destination: 192.168.20.255; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+2023-08-30T16:00:38.523Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::601f:fff:fec7:ab6b; Gateway: Interface 13 ; 
+2023-08-30T16:00:38.541Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:d::98c2:9ff:fe93:5321; Gateway: Interface 13 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::98c2:9ff:fe93:5321; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::c46a:27ff:fe10:54e6; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:d::c46a:27ff:fe10:54e6; Gateway: Interface 13 ; 
+2023-08-30T16:00:38.555Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:e::98c2:9ff:fe93:5321; Gateway: Interface 14 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::98c2:9ff:fe93:5321; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::c46a:27ff:fe10:54e6; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:e::c46a:27ff:fe10:54e6; Gateway: Interface 14 ; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::c46a:27ff:fe10:54e6; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::c46a:27ff:fe10:54e6; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::c46a:27ff:fe10:54e6; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::c46a:27ff:fe10:54e6; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::c46a:27ff:fe10:54e6; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::c46a:27ff:fe10:54e6; 
+2023-08-30T16:00:38.556Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T16:00:39.548Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T16:34:24.580Z DEBUG warp::warp_service::network_change: Routes changed:
+Added; Flags: 2116-(HOST | DONE | STATIC); Destination: fe80:d::545c:36ff:fece:a0a5; Gateway: Interface 13 ; 
+2023-08-30T16:34:49.344Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:d::c46a:27ff:fe10:54e6; Gateway: Interface 13 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::c46a:27ff:fe10:54e6; 
+2023-08-30T16:34:49.358Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 13 awdl0; Interface address: fe80:d::4e3:23ff:fe54:c222; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:d::4e3:23ff:fe54:c222; Gateway: Interface 13 ; 
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:e::c46a:27ff:fe10:54e6; Gateway: Interface 14 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::c46a:27ff:fe10:54e6; 
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 14 llw0; Interface address: fe80:e::4e3:23ff:fe54:c222; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:e::4e3:23ff:fe54:c222; Gateway: Interface 14 ; 
+Deleted; Flags: 50333764-(HOST | DONE | STATIC | IFSCOPE | CONDEMNED); Destination: fe80:d::545c:36ff:fece:a0a5; Gateway: Interface 13 ; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::4e3:23ff:fe54:c222; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::4e3:23ff:fe54:c222; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:d::; Gateway: Interface 13 ; Netmask: Other(255); Interface name: Interface 13 awdl0; Interface address: fe80:d::4e3:23ff:fe54:c222; 
+Deleted; Flags: 50331968-(DONE | CLONING | IFSCOPE | CONDEMNED); Destination: fe80:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::4e3:23ff:fe54:c222; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff01:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::4e3:23ff:fe54:c222; 
+Deleted; Flags: 58720576-(DONE | CLONING | MULTICAST | IFSCOPE | CONDEMNED); Destination: ff02:e::; Gateway: Interface 14 ; Netmask: Other(255); Interface name: Interface 14 llw0; Interface address: fe80:e::4e3:23ff:fe54:c222; 
+2023-08-30T16:34:49.359Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T16:34:50.351Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T18:21:34.828Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.1; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.100; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.103; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.106; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.107; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.110; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.112; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.121; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.122; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.125; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 50462788-(HOST | DONE | WASCLONED | IFSCOPE | CONDEMNED); Destination: 192.168.20.129; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+Deleted; Flags: 54657092-(HOST | DONE | WASCLONED | BROADCAST | IFSCOPE | CONDEMNED); Destination: 192.168.20.255; Gateway: Interface 12 ; Interface name: Interface 12 en0; Interface address: 192.168.20.116; 
+2023-08-30T20:59:01.838Z DEBUG main_loop: warp::warp_service: Entering main loop arm arm="sleep_monitor"
+2023-08-30T20:59:01.838Z DEBUG main_loop: warp::warp_service: Power status: SystemWillSleep
+2023-08-30T21:17:29.163Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T21:17:29.168Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T21:17:29.567Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T21:17:29.571Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T21:17:30.572Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T21:33:31.121Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T21:33:31.124Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T21:33:31.645Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T21:33:31.646Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T21:33:32.627Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T21:50:31.125Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T21:50:31.127Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T21:50:31.595Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T21:50:31.623Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T21:50:32.530Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T22:56:33.655Z DEBUG warp::warp_service::network_change: Routes changed:
+Deleted; Flags: 52428804-(HOST | LOCAL | IFSCOPE | CONDEMNED); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+DelAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+2023-08-30T22:56:33.656Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T22:56:34.141Z DEBUG warp::warp_service::network_change: Routes changed:
+NewAddr; Flags: 256-(CLONING); Netmask: ffff:ffff:ffff:ffff::; Interface name: Interface 11 ap1; Interface address: fe80:b::ec08:faff:fe63:89f3; 
+Added; Flags: 18875397-(UP | HOST | LLINFO | LLDATA | LOCAL | IFSCOPE); Destination: fe80:b::ec08:faff:fe63:89f3; Gateway: Interface 11 ; 
+2023-08-30T22:56:34.165Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store
+2023-08-30T22:56:35.231Z DEBUG network_info::macos::change_notifier: Network changed detected via Dynamic Store

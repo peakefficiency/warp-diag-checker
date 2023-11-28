@@ -1,0 +1,94 @@
+{
+  "available_memory": 3052978176,
+  "used_memory": 10563403776,
+  "used_swap": 0,
+  "total_memory": 17179869184,
+  "host_name": "Erichs-MacBook-Air.local",
+  "uptime": 33723,
+  "disks": [
+    {
+      "name": "Macintosh HD",
+      "total_space": 494384795648,
+      "available_space": 405056512768,
+      "mount_point": "/"
+    },
+    {
+      "name": "Macintosh HD",
+      "total_space": 494384795648,
+      "available_space": 405056512768,
+      "mount_point": "/System/Volumes/Data"
+    }
+  ],
+  "distribution_id": "macos",
+  "kernel_version": "22.6.0",
+  "load_average": {
+    "one": 3.11767578125,
+    "five": 2.9033203125,
+    "fifteen": 3.537109375
+  },
+  "cpus": [
+    {
+      "name": "1",
+      "cpu_usage": 17.824766,
+      "frequency": 0,
+      "vendor_id": "Apple",
+      "brand": "Apple M2"
+    },
+    {
+      "name": "2",
+      "cpu_usage": 16.862259,
+      "frequency": 0,
+      "vendor_id": "Apple",
+      "brand": "Apple M2"
+    },
+    {
+      "name": "3",
+      "cpu_usage": 15.491949,
+      "frequency": 0,
+      "vendor_id": "Apple",
+      "brand": "Apple M2"
+    },
+    {
+      "name": "4",
+      "cpu_usage": 14.12836,
+      "frequency": 0,
+      "vendor_id": "Apple",
+      "brand": "Apple M2"
+    },
+    {
+      "name": "5",
+      "cpu_usage": 69.21843,
+      "frequency": 0,
+      "vendor_id": "Apple",
+      "brand": "Apple M2"
+    },
+    {
+      "name": "6",
+      "cpu_usage": 16.78441,
+      "frequency": 0,
+      "vendor_id": "Apple",
+      "brand": "Apple M2"
+    },
+    {
+      "name": "7",
+      "cpu_usage": 13.084202,
+      "frequency": 0,
+      "vendor_id": "Apple",
+      "brand": "Apple M2"
+    },
+    {
+      "name": "8",
+      "cpu_usage": 10.974811,
+      "frequency": 0,
+      "vendor_id": "Apple",
+      "brand": "Apple M2"
+    }
+  ],
+  "global_cpu_info": {
+    "name": "0",
+    "cpu_usage": 21.796146,
+    "frequency": 0,
+    "vendor_id": "Apple",
+    "brand": "Apple M2"
+  }
+}

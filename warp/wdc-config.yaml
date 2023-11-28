@@ -1,0 +1,128 @@
+config_version: 0.4.0
+wdc_latest_version: 0.1.0
+bad_versions:
+  - 2022.12.475.0
+  - 2022.12.583.0
+log_patterns_by_issue:
+  - search_file: daemon.log
+    issue_type:
+      "Firewall":
+        search_term:
+          - "WARN warp::dns::doh] DoH request failed: hyper::Error(Io, Kind(BrokenPipe)"
+          - 'WARN warp::dns::doh] DoH request failed: hyper::Error(Connect, ConnectError("tcp connect error'
+      "Port Blocked":
+        search_term:
+          - 'DEBUG warp::warp: Connect finished Err(Os { code: 13, kind: PermissionDenied, message: "Permission denied" })'
+      "Port 53 Bound":
+        search_term:
+          - 'Unable to bind local UDP socket error=Os { code: 48, kind: AddrInUse, message: "Address already in use" }'
+      "BADCERT":
+        search_term:
+          - "invalid peer certificate"
+          - "BadCertificate"
+      "Certificate Install Restriction":
+        search_term:
+          - "SecTrustSettingsSetTrustSettings: The authorization was denied since no user interaction was possible"
+      "Possible Revoked Device":
+        search_term:
+          - 'code: 2019, message: "missing device id"'
+  - search_file: ps.txt
+    issue_type:
+      "Firewall":
+        search_term:
+          - Netskope
+          - ESET Cyber
+          - SophosNetFilter
+      "VPN Application Found":
+        search_term:
+          - OpenVPN
+          - sophos
+          - FortiClient
+          - Fortinet
+          - SophosAgent
+          - vpnui
+          - AnyConnect
+          - Mullvad
+          - WireGuard
+          - AWSVPNClient
+          - OpenDNS
+          - vpnagent
+          - openvpnserv
+          - FortiSSLVPNdaemon
+          - Umbrella
+          - PanGPA
+          - PanGPS
+          - ExpressVPN
+          - OpenFortiGUI
+          - VPN.appex
+  - search_file: connectivity.txt
+    issue_type:
+      "OS Firewall":
+        search_term:
+          - "os error 10013"
+reply_by_issue_type:
+  "Firewall":
+    message: |
+      There May be a Firewall or service blocking required ports or performing TSL inspection.
+      Please verify all the required ports are unblocked https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/firewall/
+  "VPN Application Found":
+    message: |
+      Warp can run alongside legacy VPN solutions provided the following requirements are met, and configuration changes are made which are listed in the [Legacy VPN compatibility documentation](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/vpn/)
+  "Port 53 Bound":
+    message: |
+      This indicates something else is bound to localhost port 53 and likely also
+      trying to do DNS interception or run a local DNS proxy.
+  "ROUTE":
+    message: |
+      A large number of route changes suggests that there is another application such as a third party VPN that is competing with the Warp client
+  "Port Blocked":
+    message: |
+      This is a Linux permission configuration issue on the device and needs to be resolved by the customer.
+      This means the UDP connection to the edge was established, but one of the steps afterward failed for lack of permissions.
+      Typically this is because something in AppArmor or SELinux is denying a capability we need to operate, probably CAP_NET_ADMIN or CAP_NET_RAW.
+      It can also happen if you are trying to run this in a Docker container and have not specified the correct permissions. Check `auditd` for denials.
+      On Linux we use `setsockopt` to set SO_MARK on the UDP socket, which can fail on permissions. We can also be denied trying to open /dev/net/tun to create the tunnel device.
+      We can also fail trying to send netlink commands to set kernel routing rules.
+  "BADCERT":
+    message: |
+      Please visit zero-trust-client.cloudflareclient.com/v0/client_config in the browser and look at the certificate used to sign the HTTPS connection.
+      Please verify https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/firewall/ for a list of domains, IPs and ports that must be excluded from Firewall or TLS inspection.
+  "BYTES":
+    message: |
+      The not enough bytes error is fixed in version 2022.9.214.1
+      Update to version post fix later than 2022.9.214.1 and verify whether issue persists.
+  "BADVERSION":
+    message: |
+      It appears that you are running a version that has been flagged as a bad version due to issues that were not found in prerelease testing.
+      This version has since been removed from the release site.
+  "OUTDATED_VERSION":
+    message: |
+      It appears that you are not running the latest version of the chosen release train.
+      Please attempt to replicate the error using the latest available version according to the details below.
+  "SPLITTUNNEL":
+    message: |
+      The IP address assigned to the interface being used for the tunnel is not correctly excluded from the split tunnel configuration.
+      Please ensure this IP address (or range) is added to the split tunnel configuration for the warp profile used by this device.
+      More details can be found at: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/private-net/connect-private-networks/#3-route-private-network-ips-through-warp"
+  "EXCLUDE_EDITED":
+    message: |
+      It appears that a change has been made to the default split tunnel exclusions list has been edited.
+      We strongly advise against this as it can cause unintended issues and should only be done in the event that warp to tunnel routing is used.
+      Only the smallest subset of IP addresses have been removed from the exclusion list.
+      More details can be found at: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/private-net/connect-private-networks/#3-route-private-network-ips-through-warp"
+  "OS Firewall":
+    message: |
+      It appears that the OS level firewall on the machine running warp is blocking access to our required endpoints.
+      Please verify all the required ports are unblocked https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/firewall/
+  "Certificate Install Restriction":
+    message: |
+      It appears that due to an OS restriction the automatic installation process of the Cloudflare Teams Certificate could not be completed in its entirety.
+      The certificate should be installed but we were not able to mark it as trusted, this will need to be done manually.
+      https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/user-side-certificates/install-cert-with-warp/#view-the-installed-certificate
+      Please mark the certificate as trusted if it is not already.
+  "Possible Revoked Device":
+    message: |
+      There is an indication that the device is being blocked by the Cloudflare edge due to the device being marked as revoked.
+      Please verify whether the device has been revoked.
+      If it has been revoked this device ID will be blocked as expected.
+      To resolve this issue please unrevoke the device or uninstall and reinstall the warp client to register the device with a new `device ID`

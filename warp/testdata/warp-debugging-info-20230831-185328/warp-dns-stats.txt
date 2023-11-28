@@ -1,0 +1,6 @@
+Queries: 4
+Average Duration: 17.50ms
+Success: 100.0%
+Timed Out: 0.0%
+No Records Found: 0.0%
+Other Error: 0.0%

@@ -1,0 +1,21 @@
+stdout:
+Software:
+
+    System Software Overview:
+
+      System Version: macOS 13.5.1 (22G90)
+      Kernel Version: Darwin 22.6.0
+      Boot Volume: Macintosh HD
+      Boot Mode: Normal
+      Computer Name: Erich’s MacBook Air
+      User Name: Erich Simon (eprosimon)
+      Secure Virtual Memory: Enabled
+      System Integrity Protection: Enabled
+      Time since boot: 9 hours, 21 minutes
+
+
+
+stderr:
+
+
+exit status: 0

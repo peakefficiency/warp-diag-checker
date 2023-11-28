@@ -1,0 +1,80 @@
+stdout:
+DNS configuration
+
+resolver #1
+  nameserver[0] : 127.0.2.2
+  nameserver[1] : 127.0.2.3
+  flags    : Request A records
+  reach    : 0x00030002 (Reachable,Local Address,Directly Reachable Address)
+
+resolver #2
+  domain   : local
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300000
+
+resolver #3
+  domain   : 254.169.in-addr.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300200
+
+resolver #4
+  domain   : 8.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300400
+
+resolver #5
+  domain   : 9.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300600
+
+resolver #6
+  domain   : a.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 300800
+
+resolver #7
+  domain   : b.e.f.ip6.arpa
+  options  : mdns
+  timeout  : 5
+  flags    : Request A records
+  reach    : 0x00000000 (Not Reachable)
+  order    : 301000
+
+DNS configuration (for scoped queries)
+
+resolver #1
+  nameserver[0] : 127.0.2.2
+  nameserver[1] : 127.0.2.3
+  if_index : 12 (en0)
+  flags    : Scoped, Request A records
+  reach    : 0x00030002 (Reachable,Local Address,Directly Reachable Address)
+
+resolver #2
+  nameserver[0] : 127.0.2.2
+  nameserver[1] : 127.0.2.3
+  nameserver[2] : fd01:db8:1111::2
+  nameserver[3] : fd01:db8:1111::3
+  if_index : 20 (utun5)
+  flags    : Scoped, Request A records, Request AAAA records
+  reach    : 0x00030002 (Reachable,Local Address,Directly Reachable Address)
+
+
+stderr:
+
+
+exit status: 0

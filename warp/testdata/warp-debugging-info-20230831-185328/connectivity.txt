@@ -1,0 +1,70 @@
+DNS Resolution:
+
+Inside Tunnel
+Resolved connectivity.cloudflareclient.com to 162.159.138.65:0; 162.159.137.65:0
+
+
+Tunnel Endpoint: 162.159.193.8
+
+Trace Result:
+
+Inside Tunnel
+Trace connectivity.cloudflareclient.com via 162.159.138.65:
+fl=373f26
+h=connectivity.cloudflareclient.com
+ip=104.28.203.161
+ts=1693508008.256
+visit_scheme=https
+uag=
+colo=LHR
+sliver=010-lhr08
+http=http/2
+loc=GB
+tls=TLSv1.3
+sni=plaintext
+warp=on
+gateway=on
+rbi=off
+kex=X25519
+
+Trace connectivity.cloudflareclient.com via 162.159.137.65:
+fl=373f26
+h=connectivity.cloudflareclient.com
+ip=104.28.203.161
+ts=1693508008.325
+visit_scheme=https
+uag=
+colo=LHR
+sliver=010-lhr08
+http=http/2
+loc=GB
+tls=TLSv1.3
+sni=plaintext
+warp=on
+gateway=on
+rbi=off
+kex=X25519
+
+
+
+Outside Tunnel
+Trace engage.cloudflareclient.com via 162.159.193.8:
+fl=377f111
+h=engage.cloudflareclient.com
+ip=188.29.52.128
+ts=1693508008.505
+visit_scheme=https
+uag=
+colo=LHR
+sliver=010-tier1
+http=http/2
+loc=GB
+tls=TLSv1.3
+sni=plaintext
+warp=off
+gateway=off
+rbi=off
+kex=X25519
+
+
+

@@ -1,0 +1,157 @@
+2023-08-07T20:42:48.677Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-07T20:42:48.677Z  INFO warp_net::ipc: Connected to ipc socket name="warp_service" path="/tmp/warp_service"
+2023-08-07T20:42:48.677Z DEBUG warp_ipc::client: Initialized IPC Client
+2023-08-07T20:42:48.767Z DEBUG warp_ipc::client: Setting status callback
+2023-08-07T20:42:48.767Z DEBUG warp_ipc::client: Setting updates callback
+2023-08-07T20:42:48.767Z DEBUG warp_ipc::client: Setting DNS Log callback
+2023-08-07T20:46:15.395Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-07T20:46:15.396Z  INFO warp_net::ipc: Connected to ipc socket name="warp_service" path="/tmp/warp_service"
+2023-08-07T20:46:15.396Z DEBUG warp_ipc::client: Initialized IPC Client
+2023-08-07T20:46:15.417Z DEBUG warp_ipc::client: Setting status callback
+2023-08-07T20:46:15.417Z DEBUG warp_ipc::client: Setting updates callback
+2023-08-07T20:46:15.417Z DEBUG warp_ipc::client: Setting DNS Log callback
+2023-08-11T14:35:27.060Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-11T14:35:27.061Z  INFO warp_net::ipc: Connected to ipc socket name="warp_service" path="/tmp/warp_service"
+2023-08-11T14:35:27.061Z DEBUG warp_ipc::client: Initialized IPC Client
+2023-08-11T14:35:27.062Z DEBUG warp_ipc::client: Setting status callback
+2023-08-11T14:35:27.062Z DEBUG warp_ipc::client: Setting updates callback
+2023-08-11T14:35:27.062Z DEBUG warp_ipc::client: Setting DNS Log callback
+2023-08-18T06:59:11.612Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T06:59:11.613Z  INFO warp_net::ipc: Connected to ipc socket name="warp_service" path="/tmp/warp_service"
+2023-08-18T06:59:11.613Z DEBUG warp_ipc::client: Initialized IPC Client
+2023-08-18T06:59:11.615Z DEBUG warp_ipc::client: Setting status callback
+2023-08-18T06:59:11.615Z DEBUG warp_ipc::client: Setting updates callback
+2023-08-18T06:59:11.615Z DEBUG warp_ipc::client: Setting DNS Log callback
+2023-08-18T09:56:01.367Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T09:56:01.368Z  INFO warp_net::ipc: Connected to ipc socket name="warp_service" path="/tmp/warp_service"
+2023-08-18T09:56:01.368Z DEBUG warp_ipc::client: Initialized IPC Client
+2023-08-18T09:56:01.370Z DEBUG warp_ipc::client: Setting status callback
+2023-08-18T09:56:01.370Z DEBUG warp_ipc::client: Setting updates callback
+2023-08-18T09:56:01.370Z DEBUG warp_ipc::client: Setting DNS Log callback
+2023-08-18T15:22:32.227Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:33.229Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:34.232Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:35.236Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:36.239Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:37.243Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:38.249Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:39.253Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:40.258Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:41.260Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:42.268Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:43.278Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:44.285Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:45.293Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:46.295Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:47.303Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:48.311Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:49.315Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:50.319Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:51.322Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:52.325Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:53.328Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:54.331Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:55.338Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:56.345Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:57.365Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:58.372Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:22:59.378Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:00.381Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:01.387Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:02.392Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:03.397Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:04.402Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:05.409Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:06.427Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:07.435Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:08.445Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:09.462Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:10.465Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:11.470Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:12.473Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:13.478Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:14.485Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:15.493Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:16.500Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:17.507Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:18.511Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:19.514Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:20.517Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:21.525Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:22.532Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:23.539Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:24.546Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:25.548Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:26.552Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:27.559Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:28.566Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:29.570Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:30.572Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:31.579Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:32.583Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:33.590Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:34.596Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:35.600Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:36.605Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:37.609Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:38.614Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:39.622Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:40.627Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:41.633Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:42.640Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:43.647Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:44.650Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:45.667Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:46.671Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:47.675Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:48.680Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:49.687Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:50.695Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:51.703Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:52.711Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:53.719Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:54.723Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:55.729Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:56.737Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:57.744Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:58.752Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:23:59.759Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:00.767Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:01.774Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:02.778Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:03.787Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:04.788Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:05.793Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:06.803Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:07.809Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:08.816Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:09.821Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:10.828Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:11.833Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:12.841Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:13.846Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:24:14.853Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:42:44.650Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-18T15:42:44.650Z  INFO warp_net::ipc: Connected to ipc socket name="warp_service" path="/tmp/warp_service"
+2023-08-18T15:42:44.650Z DEBUG warp_ipc::client: Initialized IPC Client
+2023-08-18T15:42:44.659Z DEBUG warp_ipc::client: Setting status callback
+2023-08-18T15:42:44.659Z DEBUG warp_ipc::client: Setting updates callback
+2023-08-18T15:42:44.659Z DEBUG warp_ipc::client: Setting DNS Log callback
+2023-08-21T18:18:44.631Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-21T18:18:44.631Z  INFO warp_net::ipc: Connected to ipc socket name="warp_service" path="/tmp/warp_service"
+2023-08-21T18:18:44.631Z DEBUG warp_ipc::client: Initialized IPC Client
+2023-08-21T18:18:44.639Z DEBUG warp_ipc::client: Setting status callback
+2023-08-21T18:18:44.640Z DEBUG warp_ipc::client: Setting updates callback
+2023-08-21T18:18:44.640Z DEBUG warp_ipc::client: Setting DNS Log callback
+2023-08-28T07:48:16.145Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-28T07:48:16.146Z  INFO warp_net::ipc: Connected to ipc socket name="warp_service" path="/tmp/warp_service"
+2023-08-28T07:48:16.146Z DEBUG warp_ipc::client: Initialized IPC Client
+2023-08-28T07:48:16.151Z DEBUG warp_ipc::client: Setting status callback
+2023-08-28T07:48:16.151Z DEBUG warp_ipc::client: Setting updates callback
+2023-08-28T07:48:16.151Z DEBUG warp_ipc::client: Setting DNS Log callback
+2023-08-31T09:32:08.582Z  INFO warp_ipc::client: Initialized IPC logger log_file="/Users/eprosimon/Library/Logs/Cloudflare/ipc.log"
+2023-08-31T09:32:08.582Z  INFO warp_net::ipc: Connected to ipc socket name="warp_service" path="/tmp/warp_service"
+2023-08-31T09:32:08.582Z DEBUG warp_ipc::client: Initialized IPC Client
+2023-08-31T09:32:08.587Z DEBUG warp_ipc::client: Setting status callback
+2023-08-31T09:32:08.587Z DEBUG warp_ipc::client: Setting updates callback
+2023-08-31T09:32:08.587Z DEBUG warp_ipc::client: Setting DNS Log callback

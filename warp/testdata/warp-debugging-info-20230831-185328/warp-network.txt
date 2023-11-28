@@ -1,0 +1,1 @@
+{"v4_iface":{"name":"en0","id":"817D571A-8856-4CF0-871F-F6B1029C3C09","addr":"192.168.20.116","kind":{"WiFi":{"ssid":"TheSimons"}}},"v6_iface":null,"dns_servers":[{"address":"1.1.1.1"},{"address":"9.9.9.9"}],"captive_network":false,"setup_dns":["127.0.2.2","127.0.2.3","fd01:db8:1111::2","fd01:db8:1111::3"]}

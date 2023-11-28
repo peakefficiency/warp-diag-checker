@@ -1,0 +1,14 @@
+stdout:
+<dictionary> {
+  ExceptionsList : <array> {
+    0 : *.local
+    1 : 169.254/16
+  }
+  FTPPassive : 1
+}
+
+
+stderr:
+
+
+exit status: 0

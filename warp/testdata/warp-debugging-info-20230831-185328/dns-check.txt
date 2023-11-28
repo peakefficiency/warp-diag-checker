@@ -1,0 +1,2 @@
+warp-svc. DNS resolution:
+Resolved warp-svc. to 127.0.2.2:0; 127.0.2.3:0

@@ -1,0 +1,10 @@
+stdout:
+ProductName:		macOS
+ProductVersion:		13.5.1
+BuildVersion:		22G90
+
+
+stderr:
+
+
+exit status: 0
