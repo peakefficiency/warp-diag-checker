@@ -21,6 +21,7 @@ var checkCmd = &cobra.Command{
 			return
 		}
 		warp.GetOrLoadConfig(warp.WdcConfig)
+		warp.CheckForAppUpdate()
 
 		info := contents.GetInfo(warp.ZipPath)
 
