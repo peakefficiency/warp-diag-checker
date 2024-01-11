@@ -24,7 +24,10 @@ var infoCmd = &cobra.Command{
 			fmt.Println(err)
 			return
 		}
-
+		if !warp.Offline {
+			warp.GetOrLoadConfig(warp.WdcConfig) // Make sure the config is loaded
+			warp.CheckForAppUpdate()             // Check for application updates
+		}
 		info := contents.GetInfo(warp.ZipPath)
 
 		warp.NewPrinter().PrintString(info.ReportInfo())
@@ -35,6 +38,7 @@ var infoCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(infoCmd)
 	infoCmd.PersistentFlags().BoolVarP(&warp.Plain, "plain", "p", false, "Output the report in plain markdown")
+	infoCmd.PersistentFlags().BoolVarP(&warp.Offline, "offline", "o", false, "Force the use of the local YAML cache file")
 
 	// Here you will define your flags and configuration settings.
 

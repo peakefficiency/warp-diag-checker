@@ -11,8 +11,11 @@ import (
 	"os/user"
 	"path/filepath"
 
+	"github.com/hashicorp/go-version"
 	"gopkg.in/yaml.v2"
 )
+
+const AppVersion = "0.3.0"
 
 type Config struct {
 	ID   string
@@ -154,4 +157,26 @@ func SaveConfig(c Config) error {
 	fmt.Println("Configuration saved to:", configPath)
 
 	return nil
+}
+
+func CheckForAppUpdate() {
+	currentVersion, err := version.NewVersion(AppVersion)
+	if err != nil {
+		fmt.Printf("Error parsing current version: %s\n", err)
+		return
+	}
+
+	remoteVersion, err := version.NewVersion(WdcConf.AppReleaseVersion)
+	if err != nil {
+		fmt.Printf("Error parsing remote version: %s\n", err)
+		return
+	}
+
+	if remoteVersion.GreaterThan(currentVersion) {
+		fmt.Printf("A newer version of the application is available: %s. Please update to the latest version.\n", WdcConf.AppReleaseVersion)
+		fmt.Printf("If you are not able to update at the current time. Please use the -o (--offline) flag to use the local configuration.")
+		fmt.Println("You can use the saveconfig command to save the remote configuration to the local device")
+
+		os.Exit(1)
+	}
 }
