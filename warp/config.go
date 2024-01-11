@@ -15,7 +15,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-const AppVersion = "0.0.9"
+const AppVersion = "0.3.0"
 
 type Config struct {
 	ID   string
@@ -174,7 +174,9 @@ func CheckForAppUpdate() {
 
 	if remoteVersion.GreaterThan(currentVersion) {
 		fmt.Printf("A newer version of the application is available: %s. Please update to the latest version.\n", WdcConf.AppReleaseVersion)
-	} else {
-		fmt.Println("You are running the latest version of the application.")
+		fmt.Printf("If you are not able to update at the current time. Please use the -o (--offline) flag to use the local configuration.")
+		fmt.Println("You can use the saveconfig command to save the remote configuration to the local device")
+
+		os.Exit(1)
 	}
 }

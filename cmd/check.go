@@ -20,8 +20,10 @@ var checkCmd = &cobra.Command{
 			fmt.Println(err)
 			return
 		}
-		warp.GetOrLoadConfig(warp.WdcConfig)
-		warp.CheckForAppUpdate()
+		if !warp.Offline {
+			warp.GetOrLoadConfig(warp.WdcConfig) // Make sure the config is loaded
+			warp.CheckForAppUpdate()             // Check for application updates
+		}
 
 		info := contents.GetInfo(warp.ZipPath)
 
