@@ -2,46 +2,39 @@ name: Upload WARP Version to Cloudflare KV
 
 on:
   schedule:
-    # Runs at minute 13 past every hour
-    - cron: '13 * * * *'
+    - cron: '10 * * * *'
 
 jobs:
   upload-warp-version:
     runs-on: ubuntu-latest
-
+    outputs:
+      warp_version: ${{ steps.extract_version.outputs.version }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install Cloudflare WARP
+      - name: Fetch WARP Package Details
+        id: fetch_package_details
         run: |
-          # Install Cloudflare WARP 
-          curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
-          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
-          sudo apt-get update && sudo apt-get install cloudflare-warp
+          curl -fsSL https://pkg.cloudflareclient.com/dists/jammy/main/binary-amd64/Packages -o packages.txt
 
-      - name: Get WARP Version
-        id: warp_version
+      - name: Extract WARP Version
+        id: extract_version
         run: |
-          # Get the version of warp-cli and output it
-          VERSION=$(warp-cli -V | awk '{print $2}')
-          echo "WARP_VERSION=$VERSION" >> $GITHUB_ENV
+          VERSION=$(grep 'Version' packages.txt | cut -d ' ' -f 2 )
+          echo "version=$VERSION" >> $GITHUB_ENV
+          echo "::set-output name=version::$VERSION"
 
-      - name: Install Wrangler
-        run: |
-          # Install Wrangler CLI
-          npm install -g @cloudflare/wrangler
+  deploy: 
+    needs: upload-warp-version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Cloudflare KV
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_KV_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: kv:key put --namespace-id=${{ secrets.KV_NAMESPACE_ID }} "linux-version" "${{ needs.upload-warp-version.outputs.warp_version }}"
 
-      - name: Login to Cloudflare using Wrangler
-        run: wrangler login
-        env:
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
 
-      - name: Publish WARP Version to Cloudflare KV
-        run: |
-          # Publish the WARP version to Cloudflare KV
-          wrangler kv:key put --namespace-id=KV_NAMESPACE_ID "linux-version" $WARP_VERSION
-        env:
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          KV_NAMESPACE_ID: ${{ secrets.KV_NAMESPACE_ID }}
-          WARP_VERSION: ${{ env.WARP_VERSION }}
+
