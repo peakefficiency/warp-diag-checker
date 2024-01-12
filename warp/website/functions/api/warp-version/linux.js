@@ -4,7 +4,7 @@ export async function onRequestGet(context) {
     const url = new URL(request.url);
     const endpoint = url.pathname.split('/').pop();
 
-    if (endpoint === '/linux') {
+    if (endpoint === 'linux') {
         try {
             // Replace 'MY_KV_NAMESPACE' with your actual KV namespace binding name
             const data = await env.WARP_DIAG_CHECKER.get('linux-version');
