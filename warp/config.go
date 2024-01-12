@@ -42,7 +42,7 @@ type WDCYaml struct {
 	} `yaml:"reply_by_issue_type"`
 }
 
-//go:embed wdc-config.yaml
+//go:embed website/public/wdc-config.yaml
 var embeddedConfig []byte
 
 var yamlFile []byte
