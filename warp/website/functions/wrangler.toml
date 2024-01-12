@@ -1,0 +1,17 @@
+name = "warp-diag-checker"
+type = "javascript"
+
+[site]
+bucket = "./public"
+entry-point = "workers-site"
+
+# Define your KV namespace binding
+kv_namespaces = [
+  { binding = "WARP_DIAG_CHECKER", id = "4f83a632d2164dcbb568a3ec5159e7ae" }
+]
+
+[build]
+command = "npm run build"
+
+[build.upload]
+format = "service-worker"
