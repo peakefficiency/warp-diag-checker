@@ -7,7 +7,7 @@ entry-point = "workers-site"
 
 # Define your KV namespace binding
 kv_namespaces = [
-  { binding = "WARP_DIAG_CHECKER", id = "4f83a632d2164dcbb568a3ec5159e7ae" }
+  { binding = "WARP_DIAG_CHECKER", id = "4f83a632d2164dcbb568a3ec5159e7ae", preview_id = "4f83a632d2164dcbb568a3ec5159e7ae" }
 ]
 
 [build]
