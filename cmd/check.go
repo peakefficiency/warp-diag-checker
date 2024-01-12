@@ -7,7 +7,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// checkCmd represents the check command
+// checkCmd represents the check  command
 var checkCmd = &cobra.Command{
 	Use:   "check /path/to/diag.zip ",
 	Short: "Check diag for known issues",
