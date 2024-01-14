@@ -3,6 +3,8 @@ name: Upload WARP Version to Cloudflare KV
 on:
   schedule:
     - cron: '10 * * * *'
+  workflow_dispatch: 
+
 
 jobs:
   upload-warp-version:
