@@ -1,7 +1,6 @@
 package warp
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -13,55 +12,67 @@ type LogSearchResult struct {
 	Evidence     string
 }
 
+type IssueStruct struct {
+	SearchTerms []string `yaml:"search_term"`
+}
+
 var LogSearchOutput = map[string]LogSearchResult{}
 
 func (zipContent FileContentMap) LogSearch(info ParsedDiag) map[string]LogSearchResult {
 
 	for _, logPattern := range WdcConf.LogPatternsByIssue {
+		// Split the comma-separated string into a slice of strings
+		searchFilenames := strings.Split(logPattern.SearchFile, ",")
 
-		searchFilename := logPattern.SearchFile
-		if info.PlatformType == "windows" && searchFilename == "ps.txt" {
-			searchFilename = "processes.txt"
-		}
+		for _, filename := range searchFilenames {
+			filename = strings.TrimSpace(filename) // Remove any leading/trailing whitespace
 
-		content, found := zipContent[searchFilename]
-		if !found {
-			continue
-		}
+			content, found := zipContent[filename]
+			if !found {
+				continue
+			}
 
-		fileContent := string(content.Data)
+			fileContent := string(content.Data)
+			lines := strings.Split(fileContent, "\n")
 
-		for issueType, issue := range logPattern.Issue {
+			// Reverse the lines slice
+			for i := len(lines)/2 - 1; i >= 0; i-- {
+				opp := len(lines) - 1 - i
+				lines[i], lines[opp] = lines[opp], lines[i]
+			}
 
-			evidence := []string{}
+			for issueType, issue := range logPattern.Issue {
+				evidence := []string{}
+				numEntries := 5
 
-			for _, searchTerm := range issue.SearchTerms {
+				for _, searchTerm := range issue.SearchTerms {
+					for i := len(lines) - 1; i >= 0; i-- {
+						line := lines[i]
 
-				for _, line := range strings.Split(fileContent, "\n") {
-
-					if strings.Contains(line, searchTerm) {
-						evidence = append(evidence, line)
+						if strings.Contains(line, searchTerm) {
+							evidence = append(evidence, line)
+							if len(evidence) >= numEntries {
+								break
+							}
+						}
 					}
+				}
 
+				// Reverse the evidence slice
+				for i := len(evidence)/2 - 1; i >= 0; i-- {
+					opp := len(evidence) - 1 - i
+					evidence[i], evidence[opp] = evidence[opp], evidence[i]
+				}
+
+				if len(evidence) > 0 {
+					LogSearchOutput[issueType] = LogSearchResult{
+						IssueType: issueType,
+						Evidence:  strings.Join(evidence, "\n"),
+					}
 				}
 			}
-
-			if len(evidence) > 0 {
-				LogSearchOutput[issueType] = LogSearchResult{
-					IssueType: issueType,
-					Evidence:  strings.Join(evidence, "\n"),
-				}
-			}
-
-		}
-
-	}
-	if Debug {
-		fmt.Println("Log Search Output:")
-		for issueType, result := range LogSearchOutput {
-			fmt.Printf(" IssueType: %s\n", issueType)
-			fmt.Printf(" Evidence:\n%s\n", result.Evidence)
 		}
 	}
+
 	return LogSearchOutput
 }
