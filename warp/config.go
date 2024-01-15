@@ -59,57 +59,138 @@ var WdcConfig = Config{
 var SaveReport, Verbose, Debug, Offline, Plain bool
 
 func LocalConfig(c Config) {
-
-	yamlFile, err = os.ReadFile(c.Path)
+	// First, try to read the YAML file from the specified path
+	localYamlFile, err := os.ReadFile(c.Path)
 	if err != nil {
+		// If reading from c.Path fails, try to read from the user's home directory
 		usr, err := user.Current()
 		if err != nil {
-			fmt.Println("Failed to get current user:", err)
+			if Debug {
+				fmt.Printf("Debug: Failed to get current user: %s\n", err)
+			}
+			fmt.Println("Using embedded configuration as fallback")
+			yamlFile = embeddedConfig
 			return
 		}
 		configPath := filepath.Join(usr.HomeDir, c.File)
-		yamlFile, err = os.ReadFile(configPath)
+		localYamlFile, err = os.ReadFile(configPath)
 		if err != nil {
-			fmt.Println("Failed to read local YAML file:", err)
-			yamlFile = embeddedConfig // use the embedded config as fallback
+			if Debug {
+				fmt.Printf("Debug: Failed to read local YAML file from home directory: %s\n", err)
+			}
+			fmt.Println("Using embedded configuration as fallback")
+			yamlFile = embeddedConfig
+			return
 		}
 	}
-}
 
-func GetOrLoadConfig(c Config) {
-
-	if Offline {
-
-		LocalConfig(c)
-		LoadConfig(c)
+	// If the local file is read successfully, unmarshal it to check its version
+	var localConfig WDCYaml
+	if err := yaml.Unmarshal(localYamlFile, &localConfig); err != nil {
+		if Debug {
+			fmt.Printf("Debug: Error unmarshalling local configuration: %s\n", err)
+		}
+		fmt.Println("Using embedded configuration as fallback")
+		yamlFile = embeddedConfig
 		return
 	}
 
-	RemoteConfig(c)
-	LoadConfig(c)
-
-}
-
-func RemoteConfig(c Config) {
-	resp, err := http.Get(c.URL)
-	if err != nil {
-		fmt.Println(errors.New("unable to get remote config"))
+	// Unmarshal the embedded configuration to check its version
+	var embeddedConfigStruct WDCYaml
+	if err := yaml.Unmarshal(embeddedConfig, &embeddedConfigStruct); err != nil {
+		if Debug {
+			fmt.Printf("Debug: Error unmarshalling embedded configuration: %s\n", err)
+		}
+		fmt.Println("Using embedded configuration as fallback")
+		yamlFile = embeddedConfig
+		return
 	}
 
+	// Compare the versions of the local and embedded configurations
+	localVersion, errLocalVersion := version.NewVersion(localConfig.ConfigVersion)
+	embeddedVersion, errEmbeddedVersion := version.NewVersion(embeddedConfigStruct.ConfigVersion)
+	if errLocalVersion == nil && errEmbeddedVersion == nil {
+		if localVersion.GreaterThanOrEqual(embeddedVersion) {
+			// If the local version is newer or the same, use the local configuration
+			yamlFile = localYamlFile
+			return
+		}
+	} else {
+		if Debug {
+			if errLocalVersion != nil {
+				fmt.Printf("Debug: Error parsing local config version: %s\n", errLocalVersion)
+			}
+			if errEmbeddedVersion != nil {
+				fmt.Printf("Debug: Error parsing embedded config version: %s\n", errEmbeddedVersion)
+			}
+		}
+	}
+
+	// If there was an error reading the local file or unmarshalling the versions, use the embedded configuration
+	fmt.Println("Using embedded configuration as fallback")
+	yamlFile = embeddedConfig
+}
+
+func GetOrLoadConfig(c Config) {
+	if Offline {
+		LocalConfig(c) // Use local configuration when offline
+		LoadConfig(c)  // Load the configuration into the application
+		return
+	}
+
+	// Attempt to fetch and use the remote configuration
+	if !RemoteConfig(c) {
+		// If fetching remote configuration fails, check local configuration
+		LocalConfig(c)
+	}
+	LoadConfig(c) // Load the configuration into the application
+}
+
+func RemoteConfig(c Config) bool {
+	resp, err := http.Get(c.URL)
+	if err != nil {
+		fmt.Println("Unable to get remote config:", err)
+		return false // Indicate failure to fetch remote config
+	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
 		fmt.Printf("Failed to download YAML file: HTTP %d\n", resp.StatusCode)
-
-		LocalConfig(c)
+		return false // Indicate failure to fetch remote config
 	}
-	yamlFile, err = io.ReadAll(resp.Body)
+
+	remoteYamlFile, err := io.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Println("Failed to read response body:", err)
-		LocalConfig(c)
-		return
+		return false // Indicate failure to fetch remote config
 	}
 
+	// Unmarshal the remote configuration to check its version
+	var remoteConfig WDCYaml
+	if err := yaml.Unmarshal(remoteYamlFile, &remoteConfig); err != nil {
+		fmt.Println("Failed to parse remote YAML file:", err)
+		return false // Indicate failure to fetch remote config
+	}
+
+	// Unmarshal the embedded configuration to check its version
+	var embeddedConfigStruct WDCYaml
+	if err := yaml.Unmarshal(embeddedConfig, &embeddedConfigStruct); err != nil {
+		fmt.Println("Failed to parse embedded YAML file:", err)
+		return false // Indicate failure to fetch remote config
+	}
+
+	// Compare the versions of the remote and embedded configurations
+	remoteVersion, errRemoteVersion := version.NewVersion(remoteConfig.ConfigVersion)
+	embeddedVersion, errEmbeddedVersion := version.NewVersion(embeddedConfigStruct.ConfigVersion)
+	if errRemoteVersion == nil && errEmbeddedVersion == nil && remoteVersion.LessThan(embeddedVersion) {
+		// If the remote version is older, use the embedded configuration
+		yamlFile = embeddedConfig
+		return true // Indicate success, but with embedded config due to version check
+	}
+
+	// If the remote version is newer or the same, use the remote configuration
+	yamlFile = remoteYamlFile
+	return true // Indicate success
 }
 
 func LoadConfig(c Config) {
