@@ -1,0 +1,50 @@
+name: Upload WARP Windows Versions to Cloudflare KV
+
+on:
+  schedule:
+    - cron: '10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch-windows-versions:
+    runs-on: ubuntu-latest
+    outputs:
+      release_version: ${{ steps.extract_release_version.outputs.version }}
+      beta_version: ${{ steps.extract_beta_version.outputs.version }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Fetch WARP Windows Release Version
+        id: extract_release_version
+        run: |
+          RELEASE_VERSION=$(curl -fsSl "https://install.appcenter.ms/api/v0.1/apps/cloudflare/1.1.1.1-windows-1/distribution_groups/release/public_releases" | jq -r '.[0].version')
+          echo "::set-output name=version::$RELEASE_VERSION"
+
+      - name: Fetch WARP Windows Beta Version
+        id: extract_beta_version
+        run: |
+          BETA_VERSION=$(curl -fsSl "https://install.appcenter.ms/api/v0.1/apps/cloudflare/1.1.1.1-windows/distribution_groups/beta/public_releases" | jq -r '.[0].version')
+          echo "::set-output name=version::$BETA_VERSION"
+
+  deploy-release-version:
+    needs: fetch-windows-versions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Release Version to Cloudflare KV
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_KV_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: kv:key put --namespace-id=${{ secrets.KV_NAMESPACE_ID }} "windows-release-version" ${{ needs.fetch-windows-versions.outputs.release_version }}
+
+  deploy-beta-version:
+    needs: fetch-windows-versions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Beta Version to Cloudflare KV
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_KV_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: kv:key put --namespace-id=${{ secrets.KV_NAMESPACE_ID }} "windows-beta-version" ${{ needs.fetch-windows-versions.outputs.beta_version }}
