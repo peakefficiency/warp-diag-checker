@@ -54,7 +54,69 @@ type ParsedSettings struct {
 	AllowLeaveOrg         bool
 }
 
+// Default values for struct fields
+const (
+	DefaultStringValue = "unknown"
+	DefaultBoolValue   = false
+	DefaultIntValue    = 0
+)
+
+// Constructor for ParsedAccount
+func NewParsedAccount() ParsedAccount {
+	return ParsedAccount{
+		AccountType:  DefaultStringValue,
+		DeviceID:     DefaultStringValue,
+		PublicKey:    DefaultStringValue,
+		AccountID:    DefaultStringValue,
+		Organization: DefaultStringValue,
+	}
+}
+
+// Constructor for ParsedNetwork
+func NewParsedNetwork() ParsedNetwork {
+	return ParsedNetwork{
+		WarpNetIPv4: DefaultStringValue,
+		WarpNetIPv6: DefaultStringValue,
+	}
+}
+
+// Constructor for ParsedSettings
+func NewParsedSettings() ParsedSettings {
+	return ParsedSettings{
+		WarpConectionStatus:   DefaultBoolValue,
+		SplitTunnelMode:       DefaultStringValue,
+		SplitTunnelList:       []string{},
+		WarpMode:              DefaultStringValue,
+		FallbackDomains:       []string{},
+		AlwaysOn:              DefaultBoolValue,
+		SwitchLocked:          DefaultBoolValue,
+		WiFiDisabled:          DefaultBoolValue,
+		EthernetDisabled:      DefaultBoolValue,
+		ResolveVia:            DefaultStringValue,
+		OnboardingDialogShown: DefaultBoolValue,
+		TeamsAuth:             DefaultBoolValue,
+		AutoFallback:          DefaultBoolValue,
+		CaptivePortalTimeout:  DefaultIntValue,
+		AllowModeSwitch:       DefaultBoolValue,
+		AllowUpdates:          DefaultBoolValue,
+		AllowLeaveOrg:         DefaultBoolValue,
+	}
+}
+
+// Constructor for ParsedDiag
+func NewParsedDiag() ParsedDiag {
+	return ParsedDiag{
+		DiagName:         DefaultStringValue,
+		InstalledVersion: DefaultStringValue,
+		PlatformType:     DefaultStringValue,
+		Settings:         NewParsedSettings(),
+		Account:          NewParsedAccount(),
+		Network:          NewParsedNetwork(),
+	}
+}
+
 func (zipContent FileContentMap) GetInfo(zipPath string) (info ParsedDiag) {
+	info = NewParsedDiag() // Initialize with default values
 
 	info.DiagName = filepath.Base(zipPath)
 
