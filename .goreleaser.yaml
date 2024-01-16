@@ -1,11 +1,3 @@
-# This is an example .goreleaser.yml file with some sensible defaults.
-# Make sure to check the documentation at https://goreleaser.com
-
-# The lines below are called `modelines`. See `:help modeline`
-# Feel free to remove those if you don't want/need to use them.
-# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
-# vim: set ts=2 sw=2 tw=0 fo=cnqoj
-
 version: 1
 
 before:
@@ -68,7 +60,29 @@ brews:
     folder: Formula
     homepage: https://github.com/peakefficiency/warp-diag-checker
     description: "Simple tool to check for known warp issues"
-    tap:
+    repository:
       owner: peakefficiency
       name: homebrew-releases
     caveats: "More information here: https://github.com/peakefficiency/warp-diag-checker"
+
+chocolateys:
+  - name: warp-diag-checker
+    owners: Peak Efficiency
+    authors: Peak Efficiency
+    project_url: https://github.com/peakefficiency/warp-diag-checker
+    icon_url: "https://raw.githubusercontent.com/peakefficiency/warp-diag-checker/main/assets/icon.png"
+    copyright: Copyright (C) <year> Peak Efficiency
+    license_url: https://github.com/peakefficiency/warp-diag-checker/blob/main/LICENSE
+    project_source_url: https://github.com/peakefficiency/warp-diag-checker
+    docs_url: https://github.com/peakefficiency/warp-diag-checker/blob/main/README.md
+    bug_tracker_url: https://github.com/peakefficiency/warp-diag-checker/issues
+    tags: "network, diagnostics, warp, cloudflare"
+    summary: Warp Diagnostics Checker
+    description: |
+      Warp Diagnostics Checker is a simple tool to check for known warp issues.
+      It helps diagnose common problems and provides helpful information to resolve them.
+    release_notes: "https://github.com/peakefficiency/warp-diag-checker/releases/tag/v{{ .Version }}"
+    api_key: "{{ .Env.CHOCOLATEY_API_KEY }}"
+    source_repo: "https://push.chocolatey.org/"
+    skip_publish: false
+# ... (other config sections)
