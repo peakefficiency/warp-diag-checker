@@ -39,7 +39,6 @@ jobs:
           git clone https://github.com/chocolatey/choco.git
           cd choco
           chmod +x build.sh
-          chmod +x zip.sh
           ./build.sh
           sudo mkdir -p /opt/chocolatey
           sudo cp -r ./code_drop/temp/_PublishedApps/choco/* /opt/chocolatey/
