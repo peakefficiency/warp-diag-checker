@@ -7,7 +7,7 @@ on:
 
 
 jobs:
-  upload-warp-version:
+  upload-linux-version:
     runs-on: ubuntu-latest
     outputs:
       warp_version: ${{ steps.extract_version.outputs.version }}
@@ -23,12 +23,12 @@ jobs:
       - name: Extract WARP Version
         id: extract_version
         run: |
-          VERSION=$(grep 'Version' packages.txt | cut -d ' ' -f 2 )
-          echo "version=$VERSION" >> $GITHUB_ENV
-          echo "::set-output name=version::$VERSION"
+          VERSION=$(grep 'Version' packages.txt | cut -d ' ' -f 2)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
 
   deploy: 
-    needs: upload-warp-version
+    needs: upload-linux-version
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Cloudflare KV
@@ -36,7 +36,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_KV_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: kv:key put --namespace-id=${{ secrets.KV_NAMESPACE_ID }} "linux-version" "${{ needs.upload-warp-version.outputs.warp_version }}"
-
+          command: kv:key put --namespace-id=${{ secrets.KV_NAMESPACE_ID }} "linux-version" "${{ needs.upload-linux-version.outputs.warp_version }}"
 
 
