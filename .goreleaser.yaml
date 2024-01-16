@@ -71,5 +71,4 @@ brews:
     tap:
       owner: peakefficiency
       name: homebrew-releases
-    url_template: "https://github.com/peakefficiency/warp-diag-checker/releases/download/{{ .Tag }}/warp-diag-checker_{{ .Os }}_{{ .Arch }}.tar.gz"
     caveats: "More information here: https://github.com/peakefficiency/warp-diag-checker"
