@@ -16,24 +16,18 @@ before:
     - go generate ./...
 
 builds:
-  - id: wdc-linux
-    binary: warp-diag-checker
-    env:
-      - CGO_ENABLED=0
-    goos:
-      - linux
-  - id: wdc-darwin
+  - id: warp-diag-checker
     binary: warp-diag-checker
     env:
       - CGO_ENABLED=0
     goos:
       - darwin
-  - id: wdc-windows
-    binary: warp-diag-checker
-    env:
-      - CGO_ENABLED=0
-    goos:
+      - linux
       - windows
+    goarch:
+      - amd64
+      - arm
+      - arm64
 
 release:
   prerelease: auto
