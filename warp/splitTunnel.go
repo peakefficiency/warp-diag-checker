@@ -27,11 +27,17 @@ var DefaultExcludedCIDRs = []string{
 var Cidrs []string
 
 func (info ParsedDiag) SplitTunnelCheck() (CheckResult, error) {
-
 	SplitTunnelResult := CheckResult{
-
 		CheckName: "IP Address Split Tunnel Check",
 		IssueType: "SPLITTUNNEL",
+	}
+
+	// Check if the SplitTunnelMode or WarpNetIPv4 have default values
+	if info.Settings.SplitTunnelMode == DefaultStringValue || info.Network.WarpNetIPv4 == "" {
+		SplitTunnelResult.CheckPass = false
+		SplitTunnelResult.IssueType = "default values found"
+		SplitTunnelResult.Evidence = "Could not set SplitTunnelMode or WarpNetIPv4 to valid values while parsing \n manually validate warp-settings.txt warp-network.txt files."
+		return SplitTunnelResult, nil
 	}
 
 	ip := net.ParseIP(info.Network.WarpNetIPv4)

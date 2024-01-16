@@ -273,21 +273,26 @@ func (zipContent FileContentMap) GetInfo(zipPath string) (info ParsedDiag) {
 
 		}
 
-		for _, line := range settingsLines[splitTunnelStart+1 : fallbackDomainsStart] {
-			if strings.HasPrefix(line, "  ") {
-				splitTunnelEntry := strings.TrimSpace(line)
-				info.Settings.SplitTunnelList = append(info.Settings.SplitTunnelList, splitTunnelEntry)
-
-			}
-		}
-		for _, line := range settingsLines[fallbackDomainsStart+1 : postFallbackSettings] {
-			if strings.HasPrefix(line, "  ") {
-				fallbackEntry := strings.TrimSpace(line)
-				info.Settings.FallbackDomains = append(info.Settings.FallbackDomains, fallbackEntry)
+		// Check if the indices are within bounds before slicing
+		if splitTunnelStart+1 < len(settingsLines) && splitTunnelStart+1 < fallbackDomainsStart {
+			for _, line := range settingsLines[splitTunnelStart+1 : fallbackDomainsStart] {
+				if strings.HasPrefix(line, "  ") {
+					splitTunnelEntry := strings.TrimSpace(line)
+					info.Settings.SplitTunnelList = append(info.Settings.SplitTunnelList, splitTunnelEntry)
+				}
 			}
 		}
 
+		if fallbackDomainsStart+1 < len(settingsLines) && fallbackDomainsStart+1 < postFallbackSettings {
+			for _, line := range settingsLines[fallbackDomainsStart+1 : postFallbackSettings] {
+				if strings.HasPrefix(line, "  ") {
+					fallbackEntry := strings.TrimSpace(line)
+					info.Settings.FallbackDomains = append(info.Settings.FallbackDomains, fallbackEntry)
+				}
+			}
+		}
 	}
+
 	for _, line := range info.Settings.SplitTunnelList {
 
 		cidr := strings.Split(line, " ")[0] // Only use the first part of the split line as the CIDR ignores comments
