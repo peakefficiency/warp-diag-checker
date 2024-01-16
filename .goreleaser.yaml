@@ -17,19 +17,19 @@ before:
 
 builds:
   - id: wdc-linux
-    binary: wdc
+    binary: warp-diag-checker
     env:
       - CGO_ENABLED=0
     goos:
       - linux
   - id: wdc-darwin
-    binary: wdc
+    binary: warp-diag-checker
     env:
       - CGO_ENABLED=0
     goos:
       - darwin
   - id: wdc-windows
-    binary: wdc
+    binary: warp-diag-checker
     env:
       - CGO_ENABLED=0
     goos:
