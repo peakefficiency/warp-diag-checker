@@ -16,13 +16,24 @@ before:
     - go generate ./...
 
 builds:
-  - binary: warp-diag-checker
-  - env:
+  - id: wdc-linux
+    binary: wdc
+    env:
       - CGO_ENABLED=0
     goos:
       - linux
-      - windows
+  - id: wdc-darwin
+    binary: wdc
+    env:
+      - CGO_ENABLED=0
+    goos:
       - darwin
+  - id: wdc-windows
+    binary: wdc
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - windows
 
 release:
   prerelease: auto
@@ -62,9 +73,9 @@ brews:
     folder: Formula
     homepage: https://github.com/peakefficiency/warp-diag-checker
     description: "A simple tool to check for known warp issues"
-    tap:
-      owner: peakefficiency
+    repository:
       name: homebrew-releases
+      owner: peakefficiency
 
 checksum:
   name_template: "checksums.txt"
