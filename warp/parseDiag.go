@@ -54,7 +54,69 @@ type ParsedSettings struct {
 	AllowLeaveOrg         bool
 }
 
+// Default values for struct fields
+const (
+	DefaultStringValue = "unknown"
+	DefaultBoolValue   = false
+	DefaultIntValue    = 0
+)
+
+// Constructor for ParsedAccount
+func NewParsedAccount() ParsedAccount {
+	return ParsedAccount{
+		AccountType:  DefaultStringValue,
+		DeviceID:     DefaultStringValue,
+		PublicKey:    DefaultStringValue,
+		AccountID:    DefaultStringValue,
+		Organization: DefaultStringValue,
+	}
+}
+
+// Constructor for ParsedNetwork
+func NewParsedNetwork() ParsedNetwork {
+	return ParsedNetwork{
+		WarpNetIPv4: DefaultStringValue,
+		WarpNetIPv6: DefaultStringValue,
+	}
+}
+
+// Constructor for ParsedSettings
+func NewParsedSettings() ParsedSettings {
+	return ParsedSettings{
+		WarpConectionStatus:   DefaultBoolValue,
+		SplitTunnelMode:       DefaultStringValue,
+		SplitTunnelList:       []string{},
+		WarpMode:              DefaultStringValue,
+		FallbackDomains:       []string{},
+		AlwaysOn:              DefaultBoolValue,
+		SwitchLocked:          DefaultBoolValue,
+		WiFiDisabled:          DefaultBoolValue,
+		EthernetDisabled:      DefaultBoolValue,
+		ResolveVia:            DefaultStringValue,
+		OnboardingDialogShown: DefaultBoolValue,
+		TeamsAuth:             DefaultBoolValue,
+		AutoFallback:          DefaultBoolValue,
+		CaptivePortalTimeout:  DefaultIntValue,
+		AllowModeSwitch:       DefaultBoolValue,
+		AllowUpdates:          DefaultBoolValue,
+		AllowLeaveOrg:         DefaultBoolValue,
+	}
+}
+
+// Constructor for ParsedDiag
+func NewParsedDiag() ParsedDiag {
+	return ParsedDiag{
+		DiagName:         DefaultStringValue,
+		InstalledVersion: DefaultStringValue,
+		PlatformType:     DefaultStringValue,
+		Settings:         NewParsedSettings(),
+		Account:          NewParsedAccount(),
+		Network:          NewParsedNetwork(),
+	}
+}
+
 func (zipContent FileContentMap) GetInfo(zipPath string) (info ParsedDiag) {
+	info = NewParsedDiag() // Initialize with default values
 
 	info.DiagName = filepath.Base(zipPath)
 
@@ -211,21 +273,26 @@ func (zipContent FileContentMap) GetInfo(zipPath string) (info ParsedDiag) {
 
 		}
 
-		for _, line := range settingsLines[splitTunnelStart+1 : fallbackDomainsStart] {
-			if strings.HasPrefix(line, "  ") {
-				splitTunnelEntry := strings.TrimSpace(line)
-				info.Settings.SplitTunnelList = append(info.Settings.SplitTunnelList, splitTunnelEntry)
-
-			}
-		}
-		for _, line := range settingsLines[fallbackDomainsStart+1 : postFallbackSettings] {
-			if strings.HasPrefix(line, "  ") {
-				fallbackEntry := strings.TrimSpace(line)
-				info.Settings.FallbackDomains = append(info.Settings.FallbackDomains, fallbackEntry)
+		// Check if the indices are within bounds before slicing
+		if splitTunnelStart+1 < len(settingsLines) && splitTunnelStart+1 < fallbackDomainsStart {
+			for _, line := range settingsLines[splitTunnelStart+1 : fallbackDomainsStart] {
+				if strings.HasPrefix(line, "  ") {
+					splitTunnelEntry := strings.TrimSpace(line)
+					info.Settings.SplitTunnelList = append(info.Settings.SplitTunnelList, splitTunnelEntry)
+				}
 			}
 		}
 
+		if fallbackDomainsStart+1 < len(settingsLines) && fallbackDomainsStart+1 < postFallbackSettings {
+			for _, line := range settingsLines[fallbackDomainsStart+1 : postFallbackSettings] {
+				if strings.HasPrefix(line, "  ") {
+					fallbackEntry := strings.TrimSpace(line)
+					info.Settings.FallbackDomains = append(info.Settings.FallbackDomains, fallbackEntry)
+				}
+			}
+		}
 	}
+
 	for _, line := range info.Settings.SplitTunnelList {
 
 		cidr := strings.Split(line, " ")[0] // Only use the first part of the split line as the CIDR ignores comments
