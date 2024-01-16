@@ -50,6 +50,9 @@ archives:
       - goos: windows
         format: zip
 
+checksum:
+  name_template: "checksums.txt"
+
 changelog:
   sort: asc
   filters:
@@ -59,17 +62,14 @@ changelog:
 
 brews:
   - name: warp-diag-checker
-
     commit_author:
       name: goreleaserbot
       email: bot@goreleaser.com
-
     folder: Formula
     homepage: https://github.com/peakefficiency/warp-diag-checker
-    description: "A simple tool to check for known warp issues"
-    repository:
-      name: homebrew-releases
+    description: "Simple tool to check for known warp issues"
+    tap:
       owner: peakefficiency
-
-checksum:
-  name_template: "checksums.txt"
+      name: homebrew-releases
+    url_template: "https://github.com/peakefficiency/warp-diag-checker/releases/download/{{ .Tag }}/warp-diag-checker_{{ .Os }}_{{ .Arch }}.tar.gz"
+    caveats: "More information here: https://github.com/peakefficiency/warp-diag-checker"
