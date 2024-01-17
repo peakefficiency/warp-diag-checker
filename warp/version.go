@@ -38,7 +38,7 @@ type LatestVersions struct {
 
 func FetchVersionFrom(url string) (string, error) {
 	client := &http.Client{
-		Timeout: time.Second * 10, // Set a timeout for the request
+		Timeout: time.Second * 1,
 	}
 
 	// Create a new GET request
