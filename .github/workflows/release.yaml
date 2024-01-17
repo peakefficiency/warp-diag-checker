@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   goreleaser:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,25 +27,10 @@ jobs:
       # More assembly might be required: Docker logins, GPG, etc.
       # It all depends on your needs.
 
-      - name: Install Dependencies
-        run: |
-          sudo apt install ca-certificates gnupg
-          sudo gpg --homedir /tmp --no-default-keyring --keyring /usr/share/keyrings/mono-official-archive-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-          echo "deb [signed-by=/usr/share/keyrings/mono-official-archive-keyring.gpg] https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
-          sudo apt update
-          sudo apt install mono-devel dotnet-runtime-8.0 -y
-          export PKG_CONFIG_PATH=/opt/local/lib/pkgconfig:/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig:$PKG_CONFIG_PATH
-          git clone https://github.com/chocolatey/choco.git
-          cd choco
-          chmod +x build.sh
-          ./build.sh
-          sudo mkdir -p /opt/chocolatey
-          sudo cp -r ./code_drop/temp/_PublishedApps/choco/* /opt/chocolatey/
-          echo "ChocolateyInstall=/opt/chocolatey" | sudo tee -a /etc/environment
-          export ChocolateyInstall=/opt/chocolatey
-          sudo cp ./docker/choco_wrapper /usr/local/bin/choco
-          sudo chmod +x /usr/local/bin/choco
-
+      - name: Chocolatey Action
+        uses: crazy-max/ghaction-chocolatey@v3.0.0
+        with:
+          args: -h
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v5
@@ -57,6 +42,70 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PUBLISHER_TOKEN }}
           CHOCOLATEY_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }} 
+
+
+
+
+
+# # .github/workflows/release.yml
+# name: goreleaser
+
+# on:
+#   push:
+#     # run only against tags
+#     tags:
+#       - "*"
+
+# permissions:
+#   contents: write
+#   # packages: write
+#   # issues: write
+
+# jobs:
+#   goreleaser:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+#       - name: Set up Go
+#         uses: actions/setup-go@v4
+#         with:
+#           go-version: stable
+#       # More assembly might be required: Docker logins, GPG, etc.
+#       # It all depends on your needs.
+
+#       - name: Install Dependencies
+#         run: |
+#           sudo apt install ca-certificates gnupg
+#           sudo gpg --homedir /tmp --no-default-keyring --keyring /usr/share/keyrings/mono-official-archive-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+#           echo "deb [signed-by=/usr/share/keyrings/mono-official-archive-keyring.gpg] https://download.mono-project.com/repo/ubuntu stable-focal main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+#           sudo apt update
+#           sudo apt install mono-devel dotnet-runtime-8.0 -y
+#           export PKG_CONFIG_PATH=/opt/local/lib/pkgconfig:/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig:$PKG_CONFIG_PATH
+#           git clone https://github.com/chocolatey/choco.git
+#           cd choco
+#           chmod +x build.sh
+#           ./build.sh
+#           sudo mkdir -p /opt/chocolatey
+#           sudo cp -r ./code_drop/temp/_PublishedApps/choco/* /opt/chocolatey/
+#           echo "ChocolateyInstall=/opt/chocolatey" | sudo tee -a /etc/environment
+#           export ChocolateyInstall=/opt/chocolatey
+#           sudo cp ./docker/choco_wrapper /usr/local/bin/choco
+#           sudo chmod +x /usr/local/bin/choco
+
+
+#       - name: Run GoReleaser
+#         uses: goreleaser/goreleaser-action@v5
+#         with:
+#           # either 'goreleaser' (default) or 'goreleaser-pro'
+#           distribution: goreleaser
+#           version: ${{env.GITHUB_REF_NAME}}
+#           args: release --clean
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.PUBLISHER_TOKEN }}
+#           CHOCOLATEY_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }} 
 
 
 
