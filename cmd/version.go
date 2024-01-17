@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/peakefficiency/warp-diag-checker/warp"
+	"github.com/peakefficiency/warp-diag-checker/wdc"
 	"github.com/spf13/cobra"
 )
 
@@ -13,7 +13,7 @@ var versionCmd = &cobra.Command{
 	Short: "Print wdc version",
 	Long:  `Print application version`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(warp.AppVersion)
+		fmt.Println(wdc.AppVersion)
 	},
 }
 

@@ -6,6 +6,7 @@ import (
 
 	"github.com/charmbracelet/glamour"
 	"github.com/peakefficiency/warp-diag-checker/warp"
+	"github.com/peakefficiency/warp-diag-checker/wdc"
 	"github.com/spf13/cobra"
 )
 
@@ -24,10 +25,10 @@ var infoCmd = &cobra.Command{
 			fmt.Println(err)
 			return
 		}
-		warp.GetOrLoadConfig(warp.WdcConfig) // Make sure the config is loaded
+		wdc.GetOrLoadConfig(wdc.WdcConfig) // Make sure the config is loaded
 
-		if !warp.Offline {
-			warp.CheckForAppUpdate()             // Check for application updates
+		if !wdc.Offline {
+			wdc.CheckForAppUpdate() // Check for application updates
 		}
 		info := contents.GetInfo(warp.ZipPath)
 
@@ -38,8 +39,8 @@ var infoCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(infoCmd)
-	infoCmd.PersistentFlags().BoolVarP(&warp.Plain, "plain", "p", false, "Output the report in plain markdown")
-	infoCmd.PersistentFlags().BoolVarP(&warp.Offline, "offline", "o", false, "Force the use of the local YAML cache file")
+	infoCmd.PersistentFlags().BoolVarP(&wdc.Plain, "plain", "p", false, "Output the report in plain markdown")
+	infoCmd.PersistentFlags().BoolVarP(&wdc.Offline, "offline", "o", false, "Force the use of the local YAML cache file")
 
 	// Here you will define your flags and configuration settings.
 
@@ -60,7 +61,7 @@ func (info ParsedDiagInfo) ReportInfo() (string, error) {
 	markdown.WriteString(fmt.Sprintf("* Name: %s\n", info.DiagName))
 	markdown.WriteString(fmt.Sprintf("* Platform: %s\n", info.PlatformType))
 
-	if warp.Plain {
+	if wdc.Plain {
 		return markdown.String(), nil
 	}
 

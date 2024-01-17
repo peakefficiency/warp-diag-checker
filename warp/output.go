@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/charmbracelet/glamour"
+	"github.com/peakefficiency/warp-diag-checker/wdc"
 )
 
 type CheckResult struct {
@@ -53,7 +54,7 @@ func (info ParsedDiag) ReportInfo() (string, error) {
 	markdown.WriteString(fmt.Sprintf("* Name: %s\n", info.DiagName))
 	markdown.WriteString(fmt.Sprintf("* Platform: %s\n", info.PlatformType))
 
-	if Plain {
+	if wdc.Plain {
 		return markdown.String(), nil
 	}
 
@@ -69,7 +70,7 @@ func ReportLogSearch(results map[string]LogSearchResult) (string, error) {
 	markdown.WriteString("## Log Search Results\n")
 
 	for issueType, result := range results {
-		reply := WdcConf.ReplyByIssueType[issueType]
+		reply := wdc.WdcConf.ReplyByIssueType[issueType]
 
 		markdown.WriteString(fmt.Sprintf("### %s\n", issueType))
 		markdown.WriteString(fmt.Sprintf("%s\n", reply.Message))
@@ -77,7 +78,7 @@ func ReportLogSearch(results map[string]LogSearchResult) (string, error) {
 		markdown.WriteString("\n")
 	}
 
-	if Plain {
+	if wdc.Plain {
 		return markdown.String(), nil
 	}
 
@@ -88,7 +89,7 @@ func (result CheckResult) MarkdownCheckResult() (string, error) {
 	var markdown strings.Builder
 
 	if !result.CheckPass && result.Evidence != "" {
-		replyMsg := WdcConf.ReplyByIssueType[result.IssueType].Message
+		replyMsg := wdc.WdcConf.ReplyByIssueType[result.IssueType].Message
 
 		markdown.WriteString(fmt.Sprintf("## %s\n", result.CheckName))
 
@@ -96,7 +97,7 @@ func (result CheckResult) MarkdownCheckResult() (string, error) {
 
 		markdown.WriteString(fmt.Sprintf("- Evidence: \n\n```\n%s\n```\n\n", result.Evidence))
 
-		if Plain {
+		if wdc.Plain {
 			return markdown.String(), nil
 		}
 

@@ -2,6 +2,8 @@ package warp
 
 import (
 	"strings"
+
+	"github.com/peakefficiency/warp-diag-checker/wdc"
 )
 
 type LogSearchResult struct {
@@ -20,7 +22,7 @@ var LogSearchOutput = map[string]LogSearchResult{}
 
 func (zipContent FileContentMap) LogSearch(info ParsedDiag) map[string]LogSearchResult {
 
-	for _, logPattern := range WdcConf.LogPatternsByIssue {
+	for _, logPattern := range wdc.WdcConf.LogPatternsByIssue {
 		// Split the comma-separated string into a slice of strings
 		searchFilenames := strings.Split(logPattern.SearchFile, ",")
 

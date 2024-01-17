@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/peakefficiency/warp-diag-checker/warp"
+	"github.com/peakefficiency/warp-diag-checker/wdc"
 	"github.com/spf13/cobra"
 )
 
@@ -16,7 +16,7 @@ var saveconfigCmd = &cobra.Command{
 	This will be checked when using the '-o' offline function on the 'check' function.`,
 	Run: func(cmd *cobra.Command, args []string) {
 
-		err := warp.SaveConfig(warp.WdcConfig)
+		err := wdc.SaveConfig(wdc.WdcConfig)
 
 		if err != nil {
 

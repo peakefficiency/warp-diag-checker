@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/hashicorp/go-version"
+	"github.com/peakefficiency/warp-diag-checker/wdc"
 )
 
 const (
@@ -118,7 +119,7 @@ func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error
 		CheckPass: true,
 	}
 
-	if Debug {
+	if wdc.Debug {
 		fmt.Printf("installed version %s", info.InstalledVersion)
 	}
 

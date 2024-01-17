@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/peakefficiency/warp-diag-checker/warp"
+	"github.com/peakefficiency/warp-diag-checker/wdc"
 	"github.com/spf13/cobra"
 )
 
@@ -20,10 +21,10 @@ var checkCmd = &cobra.Command{
 			fmt.Println(err)
 			return
 		}
-		warp.GetOrLoadConfig(warp.WdcConfig) // Make sure the config is loaded
+		wdc.GetOrLoadConfig(wdc.WdcConfig) // Make sure the config is loaded
 
-		if !warp.Offline {
-			warp.CheckForAppUpdate() // Check for application updates
+		if !wdc.Offline {
+			wdc.CheckForAppUpdate() // Check for application updates
 		}
 
 		info := contents.GetInfo(warp.ZipPath)
@@ -43,10 +44,10 @@ var checkCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(checkCmd)
-	checkCmd.PersistentFlags().BoolVarP(&warp.Plain, "plain", "p", false, "Output the report in plain markdown")
-	checkCmd.PersistentFlags().BoolVarP(&warp.Verbose, "verbose", "v", false, "Increase output verbosity")
-	checkCmd.PersistentFlags().BoolVarP(&warp.Debug, "debug", "", false, "Enable debug printing if the output is not as expected")
-	checkCmd.PersistentFlags().BoolVarP(&warp.Offline, "offline", "o", false, "Force the use of the local YAML cache file")
+	checkCmd.PersistentFlags().BoolVarP(&wdc.Plain, "plain", "p", false, "Output the report in plain markdown")
+	checkCmd.PersistentFlags().BoolVarP(&wdc.Verbose, "verbose", "v", false, "Increase output verbosity")
+	checkCmd.PersistentFlags().BoolVarP(&wdc.Debug, "debug", "", false, "Enable debug printing if the output is not as expected")
+	checkCmd.PersistentFlags().BoolVarP(&wdc.Offline, "offline", "o", false, "Force the use of the local YAML cache file")
 	// rootCmd.PersistentFlags().BoolVarP(&warp.SaveReport, "report", "r", false, "<Save the generated report in the local folder")
 
 	// Here you will define your flags and configuration settings.

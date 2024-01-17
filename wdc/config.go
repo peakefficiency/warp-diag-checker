@@ -1,4 +1,4 @@
-package warp
+package wdc
 
 import (
 	_ "embed"
@@ -25,7 +25,8 @@ type Config struct {
 }
 
 type WDCYaml struct {
-	AppReleaseVersion  string   `yaml:"wdc_latest_version"`
+	WDCReleaseVersion  string   `yaml:"wdc_latest_version"`
+	WDDReleaseVersion  string   `yaml:"wdd_latest_version"`
 	ConfigVersion      string   `yaml:"config_version"`
 	BadVersions        []string `yaml:"bad_versions"`
 	LogPatternsByIssue []struct {
@@ -247,14 +248,14 @@ func CheckForAppUpdate() {
 		return
 	}
 
-	remoteVersion, err := version.NewVersion(WdcConf.AppReleaseVersion)
+	remoteVersion, err := version.NewVersion(WdcConf.WDCReleaseVersion)
 	if err != nil {
 		fmt.Printf("Error parsing remote version: %s\n", err)
 		return
 	}
 
 	if remoteVersion.GreaterThan(currentVersion) {
-		fmt.Printf("A newer version of the application is available: %s. Please update to the latest version.\n", WdcConf.AppReleaseVersion)
+		fmt.Printf("A newer version of the application is available: %s. Please update to the latest version.\n", WdcConf.WDCReleaseVersion)
 		fmt.Printf("If you are not able to update at the current time. Please use the -o (--offline) flag to use the local configuration.")
 		fmt.Println("You can use the saveconfig command to save the remote configuration to the local device")
 

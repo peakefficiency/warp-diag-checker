@@ -4,14 +4,15 @@ import (
 	"testing"
 
 	"github.com/peakefficiency/warp-diag-checker/warp"
+	"github.com/peakefficiency/warp-diag-checker/wdc"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestMarkownCheckResult(t *testing.T) {
 	t.Parallel()
 
-	warp.GetOrLoadConfig(warp.WdcConfig)
-	warp.Plain = true
+	wdc.GetOrLoadConfig(wdc.WdcConfig)
+	wdc.Plain = true
 	result := warp.CheckResult{
 
 		CheckName: "Warp Version Check",
