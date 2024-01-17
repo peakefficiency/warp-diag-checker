@@ -1,7 +1,6 @@
 package warp
 
 import (
-	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
@@ -11,15 +10,16 @@ import (
 )
 
 const (
-	MacReleaseURL          = "https://install.appcenter.ms/api/v0.1/apps/cloudflare/1.1.1.1-macos-1/distribution_groups/release/public_releases?scope=tester"
-	MacBetaURL             = "https://install.appcenter.ms/api/v0.1/apps/cloudflare/1.1.1.1-macos/distribution_groups/beta/public_releases?scope=tester"
-	WindowsReleaseURL      = "https://install.appcenter.ms/api/v0.1/apps/cloudflare/1.1.1.1-windows-1/distribution_groups/release/public_releases?scope=tester"
-	WindowsBetaURL         = "https://install.appcenter.ms/api/v0.1/apps/cloudflare/1.1.1.1-windows/distribution_groups/beta/public_releases?scope=tester"
-	LinuxPKGurl            = "https://pkg.cloudflareclient.com/"
+	WindowsReleaseURL      = "https://warp-diag-checker.pages.dev/api/warp-version/windows-release"
+	WindowsBetaURL         = "https://warp-diag-checker.pages.dev/api/warp-version/windows-beta"
+	MacReleaseURL          = "https://warp-diag-checker.pages.dev/api/warp-version/mac-release"
+	MacBetaURL             = "https://warp-diag-checker.pages.dev/api/warp-version/mac-beta"
+	LinuxVersionURL        = "https://warp-diag-checker.pages.dev/api/warp-version/linux"
 	WindowsDownloadURL     = "https://install.appcenter.ms/orgs/cloudflare/apps/1.1.1.1-windows-1/distribution_groups/release"
 	WindowsBetaDownloadURL = "https://install.appcenter.ms/orgs/cloudflare/apps/1.1.1.1-windows/distribution_groups/beta"
 	MacDownloadURL         = "https://install.appcenter.ms/orgs/cloudflare/apps/1.1.1.1-macos-1/distribution_groups/release"
 	MacBetaDownloadURL     = "https://install.appcenter.ms/orgs/cloudflare/apps/1.1.1.1-macos/distribution_groups/beta"
+	LinuxPKGurl            = "https://pkg.cloudflareclient.com/"
 )
 
 type Releases struct {
@@ -36,81 +36,78 @@ type LatestVersions struct {
 	Beta    string
 }
 
-func FetchReleasesFrom(url string) (ReleaseDetails []Releases, err error) {
-
+func FetchVersionFrom(url string) (string, error) {
 	client := &http.Client{
-		Timeout: time.Second * 2,
+		Timeout: time.Second * 1,
 	}
 
+	// Create a new GET request
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
-		return []Releases{}, fmt.Errorf("failed to create request: %v", err)
+		return "", fmt.Errorf("failed to create request: %v", err)
 	}
 
-	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1 Safari/605.1.15")
-
+	// Send the request
 	resp, err := client.Do(req)
 	if err != nil {
-		return []Releases{}, fmt.Errorf("failed to fetch latest version: %v", err)
+		return "", fmt.Errorf("failed to fetch version: %v", err)
 	}
 	defer resp.Body.Close()
 
+	// Check if the status code is OK
 	if resp.StatusCode != http.StatusOK {
-		return []Releases{}, fmt.Errorf("unexpected status code: %d", resp.StatusCode)
+		return "", fmt.Errorf("unexpected status code: %d", resp.StatusCode)
 	}
 
+	// Read the response body
 	bodyBytes, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return []Releases{}, fmt.Errorf("failed to read response body: %v", err)
+		return "", fmt.Errorf("failed to read response body: %v", err)
 	}
 
-	err = json.Unmarshal(bodyBytes, &ReleaseDetails)
-	if err != nil {
-		return []Releases{}, fmt.Errorf("failed to decode JSON response: %v", err)
-	}
+	// Convert the body to a string assuming the body is just a version string
+	version := string(bodyBytes)
 
-	if len(ReleaseDetails) == 0 {
-		return []Releases{}, fmt.Errorf("no releases found")
-	}
-
-	return ReleaseDetails, nil
-
+	return version, nil
 }
 
 func LatestWinVersions() (WinVersions LatestVersions, err error) {
-
-	WinBetaReleases, err := FetchReleasesFrom(WindowsBetaURL)
+	WinRelease, err := FetchVersionFrom(WindowsReleaseURL)
 	if err != nil {
 		return LatestVersions{}, err
 	}
-	WinReleases, err := FetchReleasesFrom(WindowsReleaseURL)
+	WinBeta, err := FetchVersionFrom(WindowsBetaURL)
 	if err != nil {
 		return LatestVersions{}, err
 	}
 
-	WinVersions.Release = WinReleases[0].Version
-	WinVersions.Beta = WinBetaReleases[0].Version
+	WinVersions.Release = WinRelease
+	WinVersions.Beta = WinBeta
 
 	return WinVersions, nil
-
 }
 
 func LatestMacVersions() (MacVersions LatestVersions, err error) {
-
-	MacBetaReleases, err := FetchReleasesFrom(MacBetaURL)
+	MacRelease, err := FetchVersionFrom(MacReleaseURL)
 	if err != nil {
 		return LatestVersions{}, err
 	}
-	MacReleases, err := FetchReleasesFrom(MacReleaseURL)
+	MacBeta, err := FetchVersionFrom(MacBetaURL)
 	if err != nil {
 		return LatestVersions{}, err
 	}
 
-	MacVersions.Release = MacReleases[0].ShortVersion
-	MacVersions.Beta = MacBetaReleases[0].ShortVersion
+	MacVersions.Release = MacRelease
+	MacVersions.Beta = MacBeta
 
 	return MacVersions, nil
-
+}
+func LatestLinuxVersion() (string, error) {
+	LinuxVersion, err := FetchVersionFrom(LinuxVersionURL)
+	if err != nil {
+		return "", err
+	}
+	return LinuxVersion, nil
 }
 
 func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error) {
@@ -122,15 +119,33 @@ func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error
 	}
 
 	if Debug {
-		fmt.Println(info.InstalledVersion)
-		fmt.Println("debug")
+		fmt.Printf("installed version %s", info.InstalledVersion)
 	}
 
 	switch info.PlatformType {
 	case "linux":
 		{
-			VersionCheckResult.Evidence = fmt.Sprintf("Unable to check Linux version automatically, Please verify via package repo %s", LinuxPKGurl)
-			VersionCheckResult.CheckPass = false
+			// Fetch the latest Linux version from the API
+			LinuxVersion, err := LatestLinuxVersion()
+			if err != nil {
+				return CheckResult{}, err
+			}
+
+			// Create version.Version objects for comparison
+			LinuxInstalled, err := version.NewVersion(info.InstalledVersion)
+			if err != nil {
+				return CheckResult{}, err
+			}
+			LinuxLatest, err := version.NewVersion(LinuxVersion)
+			if err != nil {
+				return CheckResult{}, err
+			}
+
+			// Compare the installed version with the latest version
+			if LinuxInstalled.LessThan(LinuxLatest) {
+				VersionCheckResult.CheckPass = false
+				VersionCheckResult.Evidence = fmt.Sprintf("Installed version: %s, latest version: %s. Please update at %s", LinuxInstalled, LinuxLatest, LinuxPKGurl)
+			}
 		}
 
 	case "windows":
@@ -155,12 +170,12 @@ func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error
 
 			if WinInstalled.LessThan(WinRelease) {
 				VersionCheckResult.CheckPass = false
-				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Latest Release version: %s", WinInstalled, WinRelease)
+				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Latest Release version: %s Please update at %s", WinInstalled, WinRelease, WindowsDownloadURL)
 			}
 
 			if WinInstalled.GreaterThan(WinRelease) && WinInstalled.LessThan(WinBeta) {
 				VersionCheckResult.CheckPass = false
-				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Which appears to be a beta as it is newer than the latest release: %s,  but not the latest beta which is: %s", WinInstalled, WinRelease, WinBeta)
+				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Which appears to be a beta as it is newer than the latest release: %s,  but not the latest beta which is: %s Please update at %s", WinInstalled, WinRelease, WinBeta, WindowsBetaDownloadURL)
 
 			}
 
@@ -186,12 +201,12 @@ func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error
 
 			if MacInstalled.LessThan(MacRelease) {
 				VersionCheckResult.CheckPass = false
-				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Latest Release version: %s", MacInstalled, MacRelease)
+				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Latest Release version: %s Please update at %s", MacInstalled, MacRelease, MacReleaseURL)
 			}
 
 			if MacInstalled.GreaterThan(MacRelease) && MacInstalled.LessThan(MacBeta) {
 				VersionCheckResult.CheckPass = false
-				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Which appears to be a beta as it is newer than the latest release: %s,  but not the latest beta which is: %s", MacInstalled, MacRelease, MacBeta)
+				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Which appears to be a beta as it is newer than the latest release: %s,  but not the latest beta which is: %s Please update at %s", MacInstalled, MacRelease, MacBeta, MacBetaDownloadURL)
 
 			}
 
