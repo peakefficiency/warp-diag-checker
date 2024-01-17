@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"regexp"
 	"time"
 
 	"github.com/hashicorp/go-version"
@@ -111,21 +110,6 @@ func LatestLinuxVersion() (string, error) {
 	return LinuxVersion, nil
 }
 
-func ParseLinuxVersion(content string) (string, error) {
-	// Define a regular expression pattern to match the version number
-	versionRegex := regexp.MustCompile(`Version:\s*(\d+\.\d+\.\d+)`)
-
-	// Find the first match for the version pattern
-	matches := versionRegex.FindStringSubmatch(content)
-	if len(matches) < 2 {
-		return "", fmt.Errorf("version string not found")
-	}
-
-	// The first match is the entire line, the second match is the captured version number
-	version := matches[1]
-	return version, nil
-}
-
 func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error) {
 
 	VersionCheckResult = CheckResult{
@@ -147,14 +131,8 @@ func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error
 				return CheckResult{}, err
 			}
 
-			// Parse the installed version using the custom parsing logic
-			parsedInstalledVersion, err := ParseLinuxVersion(info.InstalledVersion)
-			if err != nil {
-				return CheckResult{}, err
-			}
-
 			// Create version.Version objects for comparison
-			LinuxInstalled, err := version.NewVersion(parsedInstalledVersion)
+			LinuxInstalled, err := version.NewVersion(info.InstalledVersion)
 			if err != nil {
 				return CheckResult{}, err
 			}

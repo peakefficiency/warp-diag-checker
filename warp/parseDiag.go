@@ -301,13 +301,24 @@ func (zipContent FileContentMap) GetInfo(zipPath string) (info ParsedDiag) {
 	}
 
 	if content, ok := zipContent["version.txt"]; ok {
-
 		versionContent := strings.Split(string(content.Data), "\n")
 		for _, line := range versionContent {
-			if strings.Contains(line, "Version:") {
-				info.InstalledVersion = strings.Split(line, " ")[1]
+			if strings.HasPrefix(line, "Version:") {
+				// Extract the version number after the "Version:" prefix
+				versionParts := strings.Split(line, " ")
+				if len(versionParts) >= 2 {
+					info.InstalledVersion = strings.TrimSpace(versionParts[1])
+					break // Exit the loop after finding the version
+				}
+			} else if strings.Contains(line, ".") && !strings.Contains(line, "Commit:") {
+				// This handles the case where the version line doesn't start with "Version:"
+				// and is not a commit line, which is typical for Windows and Mac.
+				cleanedVersion := strings.TrimSpace(line)
+				if cleanedVersion != "" {
+					info.InstalledVersion = cleanedVersion
+					break // Exit the loop after finding the version
+				}
 			}
-			info.InstalledVersion = strings.Split(line, " ")[0]
 		}
 	}
 
