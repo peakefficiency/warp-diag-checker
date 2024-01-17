@@ -67,21 +67,20 @@ brews:
 
 chocolateys:
   - name: warp-diag-checker
-    owners: Peak Efficiency
+    owners: eprosimon
     authors: Peak Efficiency
     project_url: https://github.com/peakefficiency/warp-diag-checker
     icon_url: "https://raw.githubusercontent.com/peakefficiency/warp-diag-checker/main/assets/icon.png"
-    copyright: Copyright (C) <year> Peak Efficiency
     license_url: https://github.com/peakefficiency/warp-diag-checker/blob/main/LICENSE
-    project_source_url: https://github.com/peakefficiency/warp-diag-checker
+    package_source_url: https://github.com/peakefficiency/warp-diag-checker
     docs_url: https://github.com/peakefficiency/warp-diag-checker/blob/main/README.md
     bug_tracker_url: https://github.com/peakefficiency/warp-diag-checker/issues
-    tags: "network, diagnostics, warp, cloudflare"
+    tags: "network diagnostics warp cloudflare"
     summary: Warp Diagnostics Checker
     description: |
       Warp Diagnostics Checker is a simple tool to check for known warp issues.
       It helps diagnose common problems and provides helpful information to resolve them.
-    release_notes: "https://github.com/peakefficiency/warp-diag-checker/releases/tag/v{{ .Version }}"
+    release_notes: "https://github.com/peakefficiency/warp-diag-checker/releases/tag/{{ .Version }}"
     api_key: "{{ .Env.CHOCOLATEY_API_KEY }}"
     source_repo: "https://push.chocolatey.org/"
     skip_publish: false
