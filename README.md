@@ -18,13 +18,6 @@ flowchart LR
     C -- Runs tests on --> E[Ingested Data]
     E -- Outputs --> F[Results]
     F --> A
-
-    style A fill:#f9f,stroke:#333,stroke-width:4px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#fbf,stroke:#333,stroke-width:2px
-    style D fill:#bfb,stroke:#333,stroke-width:2px
-    style E fill:#fbb,stroke:#333,stroke-width:2px
-    style F fill:#ff9,stroke:#333,stroke-width:2px
 ```
 
 ## Installation
