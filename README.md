@@ -9,15 +9,14 @@
 </p>
 
 ## General Overview
-
 ```mermaid
 	flowchart LR
-	A[User] -- 1. Provides diag.zip --> B[Checker]
-    B -- 2. Reads Logs --> C[Log Data<br/>- daemon.log<br/>- etc.] --> E
+    A[User] -- 1. Provides diag.zip --> B[Checker]
+    B -- 2. Reads Logs --> C[Log Data<br/>- daemon<br/>- netstat<br/>- etc.] --> E
     C --> F
-    B -- 3. Gets Remote Config --> D[Config] 
-    D -- 4a. Test config --> E[Tests]
-    D -- 4b.  Search Terms --> F[Search]
+    B -- 3. Gets Config --> D[Config] 
+    D -- 4a. Sets Tests --> E[Tests]
+    D -- 4b. Sets Search --> F[Search]
     E --> G[5. Results]
     F --> G
     G -- 6. Shows Results --> A
@@ -29,14 +28,15 @@ style D fill:#BC4749,color:#fff,stroke:#333,stroke-width:2px
 style E fill:#80FF72,color:#000,stroke:#333,stroke-width:2px
 style F fill:#F0A500,color:#000,stroke:#333,stroke-width:2px
 style G fill:#6495ED,color:#fff,stroke:#333,stroke-width:2px
-
-```			   
+```																										
 
 ## Installation
 
 ### Mac and Linux
 
 To install on Mac or Linux via Homebrew:
+
+[Requires Homebrew](https://brew.sh/)
 
 ```bash {#install-brew}
 brew tap peakefficiency/releases
@@ -53,11 +53,11 @@ brew upgrade warp-diag-checker
 
 To install on Windows via Chocolatey:
 
+[Requires Chocolatey](https://docs.chocolatey.org/en-us/choco/setup)
+
 ```powershell {#install-choco}
 choco install warp-diag-checker
 ```
-
-If the latest version is still under review, you may need to specify the intended version found at https://community.chocolatey.org/packages/warp-diag-checker
 
 To update, run:
 
