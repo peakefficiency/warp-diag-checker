@@ -9,26 +9,28 @@
 </p>
 
 ## General Overview
+
 ```mermaid
-flowchart LR
-    A[User] -- 1. Provides \n warp-diag.zip --> B[warp-diag-checker]
-    B -- 2. Unzips and reads --> C[Ingested Log Data<br/>- daemon.log<br/>- netstat.txt<br/>- etc.] --> E
-	C[Ingested Log Data] --> F
-    B -- 3. Fetches config --> D[Remote Config] 
-    D -- 4a. Defines<br/>built-in tests --> E[Built-in Tests]
-    D -- 4b. Defines<br/>log search terms --> F[LogSearch]
-    E --> G[5. Collect Results]
+	flowchart LR
+	A[User] -- 1. Provides diag.zip --> B[Checker]
+    B -- 2. Reads Logs --> C[Log Data<br/>- daemon.log<br/>- etc.] --> E
+    C --> F
+    B -- 3. Gets Remote Config --> D[Config] 
+    D -- 4a. Test config --> E[Tests]
+    D -- 4b.  Search Terms --> F[Search]
+    E --> G[5. Results]
     F --> G
-    G -- 6. Display results --> A[User]
+    G -- 6. Shows Results --> A
 
 style A fill:#4F772D,color:#fff,stroke:#333,stroke-width:2px
-    style B fill:#1F618D,color:#fff,stroke:#333,stroke-width:2px  
-    style C fill:#DDA15E,color:#fff,stroke:#333,stroke-width:2px
-    style D fill:#BC4749,color:#fff,stroke:#333,stroke-width:2px
-    style E fill:#80FF72,color:#000,stroke:#333,stroke-width:2px
-    style F fill:#F0A500,color:#000,stroke:#333,stroke-width:2px
-    style G fill:#6495ED,color:#fff,stroke:#333,stroke-width:2px
-```
+style B fill:#1F618D,color:#fff,stroke:#333,stroke-width:2px  
+style C fill:#DDA15E,color:#fff,stroke:#333,stroke-width:2px
+style D fill:#BC4749,color:#fff,stroke:#333,stroke-width:2px
+style E fill:#80FF72,color:#000,stroke:#333,stroke-width:2px
+style F fill:#F0A500,color:#000,stroke:#333,stroke-width:2px
+style G fill:#6495ED,color:#fff,stroke:#333,stroke-width:2px
+
+```			   
 
 ## Installation
 
