@@ -4,9 +4,6 @@ Set FontSize 20
 Set Width 1200
 Set Height 1200
 
-Hide
-go install .
-Show
 
 # Type a command in the terminal.
 Type "warp-diag-checker check ./warp/testdata/warp-diag-demo.zip"

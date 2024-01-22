@@ -14,6 +14,10 @@ jobs:
         uses: actions/setup-go@v4
         with:
           go-version: '1.21.4'
+
+      - name: Install warp-diag-checker
+        run: go install github.com/peakefficiency/warp-diag-checker@latest
+
       - uses: actions/checkout@v3
       - uses: charmbracelet/vhs-action@v1
         with:
