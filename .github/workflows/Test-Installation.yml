@@ -1,0 +1,79 @@
+name: Test Install
+on:
+    workflow_dispatch:  
+
+
+jobs:
+
+  test-install:
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+
+    - uses: actions/checkout@v2
+
+    - name: Install Homebrew (MacOS)  
+      if: matrix.os == 'macos-latest'
+      run: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    - name: Install Chocolatey (Windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+    - name: Install via Homebrew (MacOS)
+      if: matrix.os == 'macos-latest'
+      run: |
+        brew tap peakefficiency/releases
+        brew install warp-diag-checker
+
+    - name: Install via Chocolatey (Windows)  
+      if: matrix.os == 'windows-latest'
+      run: |
+        choco install warp-diag-checker
+
+    - name: Verify install (Linux/MacOS)
+      if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
+      run: |
+        warp-diag-checker --version
+        if [ $? -ne 0 ]; then
+          echo "warp-diag-checker not installed correctly"
+          exit 1
+        fi
+
+    - name: Verify install (Windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        warp-diag-checker --version
+        If ($LASTEXITCODE -ne 0) {
+          Write-Error "warp-diag-checker not installed correctly"
+          Exit 1
+        }
+
+    - name: Check version (Linux/MacOS)
+      if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
+      run: |
+        INSTALLED_VERSION=$(warp-diag-checker --version)
+        LATEST_VERSION=$(curl -s https://api.github.com/repos/peakefficiency/warp-diag-checker/releases/latest | jq -r '.tag_name')
+
+        if [ "$INSTALLED_VERSION" != "$LATEST_VERSION" ]; then
+          echo "Installed version $INSTALLED_VERSION does not match latest $LATEST_VERSION"
+          exit 1
+        fi
+
+    - name: Check version (Windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        $installedVersion = warp-diag-checker --version
+        $latestVersion = (Invoke-RestMethod https://api.github.com/repos/peakefficiency/warp-diag-checker/releases/latest).tag_name
+
+        if ($installedVersion -ne $latestVersion) {
+          Write-Error "Installed version $installedVersion does not match latest $latestVersion"
+          Exit 1
+        }
