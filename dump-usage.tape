@@ -6,7 +6,7 @@ Set Height 1200
 
 
 # Type a command in the terminal.
-Type "warp-diag-checker dump ./warp/testdata/warp-diag-demo.zip" -f warp-settings.txt
+Type "warp-diag-checker dump ./warp/testdata/warp-diag-demo.zip -f warp-settings.txt"
 
 # Pause for dramatic effect...
 Sleep 500ms
