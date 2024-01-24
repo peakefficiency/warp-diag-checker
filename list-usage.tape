@@ -15,4 +15,4 @@ Sleep 500ms
 Enter
 
 # Admire the output for a bit.
-Sleep 10s
+Sleep 5s
