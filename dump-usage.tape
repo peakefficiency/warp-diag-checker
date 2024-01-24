@@ -1,4 +1,4 @@
-Output info-usage.gif
+Output dump-usage.gif
 # Set up a 1200x600 terminal with 46px font.
 Set FontSize 20
 Set Width 1200
