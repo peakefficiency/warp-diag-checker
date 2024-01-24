@@ -77,8 +77,33 @@ You would need to have Go installed for this
 ## Usage
 
 
-Basic usage:
+### Check for known issues:
 
 ```
-warp-diag-checker /path/to/diag.zio
+warp-diag-checker check /path/to/diag.zip
 ```
+![check-usage](/check-usage.gif)
+
+
+### Get diag info summary: 
+
+```
+warp-diag-checker info /path/to/diag.zip
+```
+![info-usage](/info-usage.gif)
+
+### Dump diag file to stdout
+
+_This allows for processing with standard shell utilities_
+
+```
+warp-diag-checker dump /path/to/diag.zip [-f filename]
+```
+![dump-usage](/dump-usage.gif)
+
+### List files in zip
+
+```
+warp-diag-checker list /path/to/diag.zip 
+```
+![list-usage](/list-usage.gif)

@@ -1,12 +1,12 @@
-name: check-usage-gif
+name: info-usage-gif
 
 on:
  workflow_dispatch: 
  push:
     tags:
-    - "*"
+     - "*"
     paths:
-      - 'check-usage.tape' # Trigger the workflow when this file changes
+      - 'info-usage.tape' # Trigger the workflow when this file changes
 
 jobs:
   vhs:
@@ -23,14 +23,14 @@ jobs:
       - uses: actions/checkout@v3
       - uses: charmbracelet/vhs-action@v1
         with:
-          path: 'check-usage.tape'
+          path: 'info-usage.tape'
       - uses: stefanzweifel/git-auto-commit-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          commit_message: Update generated check-usage GIF
+          commit_message: Update generated info-usage GIF
           branch: main
           commit_user_name: vhs-action 📼
           commit_user_email: actions@github.com
           commit_author: vhs-action 📼 <actions@github.com>
-          file_pattern: 'check-usage.gif' # Commit only the check-usage.gif file
+          file_pattern: 'info-usage.gif' # Commit only the check-usage.gif file
