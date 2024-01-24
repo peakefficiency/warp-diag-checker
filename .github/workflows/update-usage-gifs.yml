@@ -11,9 +11,6 @@ on:
 jobs:
   vhs:
     runs-on: ubuntu-latest
-    concurrency: # Ensure only one instance of the job runs at a time
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: true
     strategy:
       matrix:
         tape: ['list-usage.tape', 'dump-usage.tape', 'check-usage.tape', 'info-usage.tape']
