@@ -135,7 +135,7 @@ func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error
 			// Create version.Version objects for comparison
 			LinuxInstalled, err := version.NewVersion(info.InstalledVersion)
 			if err != nil {
-				return CheckResult{}, err
+				return CheckResult{}, fmt.Errorf("contents of version.txt: '%s'.\n latest known version: '%s'. \n please manually compare the versions. \n error: %v", info.InstalledVersion, LinuxVersion, err)
 			}
 			LinuxLatest, err := version.NewVersion(LinuxVersion)
 			if err != nil {
@@ -166,12 +166,12 @@ func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error
 			WinInstalled, err := version.NewVersion(info.InstalledVersion)
 
 			if err != nil {
-				return CheckResult{}, err
+				return CheckResult{}, fmt.Errorf("contents of version.txt: '%s'.\n latest known Release version: '%s',\n latest known beta version: '%s'. \n please manually compare the versions. \n Error: %v", info.InstalledVersion, WinVersions.Release, WinVersions.Beta, err)
 			}
 
 			if WinInstalled.LessThan(WinRelease) {
 				VersionCheckResult.CheckPass = false
-				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Latest Release version: %s Please update at %s", WinInstalled, WinRelease, WindowsDownloadURL)
+				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s,  Latest Release version: %s Please update at %s", WinInstalled, WinRelease, WindowsDownloadURL)
 			}
 
 			if WinInstalled.GreaterThan(WinRelease) && WinInstalled.LessThan(WinBeta) {
@@ -197,7 +197,7 @@ func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error
 			}
 			MacInstalled, err := version.NewVersion(info.InstalledVersion)
 			if err != nil {
-				return CheckResult{}, err
+				return CheckResult{}, fmt.Errorf("contents of version.txt: '%s'.\n Latest known Release version: '%s',\n Latest known Beta version: '%s'. \n Please manually compare the versions. Error: %v", info.InstalledVersion, MacVersions.Release, MacVersions.Beta, err)
 			}
 
 			if MacInstalled.LessThan(MacRelease) {
