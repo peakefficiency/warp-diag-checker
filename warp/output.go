@@ -19,7 +19,8 @@ type CheckResult struct {
 }
 
 type Printer struct {
-	Output io.Writer
+	Output     io.Writer
+	HasPrinted bool
 }
 
 func NewPrinter() *Printer {
@@ -117,7 +118,10 @@ func (p *Printer) PrintCheckResult(result CheckResult, err error) {
 		fmt.Fprintf(p.Output, "Error generating markdown: %s", err)
 		return
 	}
-	fmt.Fprintf(p.Output, "%s", markdown)
+	if markdown != "" {
+		p.HasPrinted = true
+		fmt.Fprintf(p.Output, "%s", markdown)
+	}
 }
 
 func (p *Printer) PrintString(s string, err error) {
@@ -127,5 +131,8 @@ func (p *Printer) PrintString(s string, err error) {
 
 	}
 
-	fmt.Fprintf(p.Output, "%s", s)
+	if s != "" {
+		p.HasPrinted = true
+		fmt.Fprintf(p.Output, "%s", s)
+	}
 }

@@ -15,6 +15,9 @@ var checkCmd = &cobra.Command{
 	Long:  `The Check command attempts to search for and surface any known issues and report them in markdown`,
 	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
+
+		printer := warp.NewPrinter()
+
 		warp.ZipPath = args[0]
 		contents, err := warp.ExtractToMemory(warp.ZipPath)
 		if err != nil {
@@ -29,16 +32,20 @@ var checkCmd = &cobra.Command{
 
 		info := contents.GetInfo(warp.ZipPath)
 
-		warp.NewPrinter().PrintCheckResult(info.VersionCheck())
+		printer.PrintCheckResult(info.VersionCheck())
+		printer.PrintCheckResult(info.SplitTunnelCheck())
 
-		warp.NewPrinter().PrintCheckResult(info.SplitTunnelCheck())
-
-		warp.NewPrinter().PrintCheckResult(info.DefaultExcludeCheck())
+		if wdc.Verbose {
+			printer.PrintCheckResult(info.DefaultExcludeCheck())
+		}
 
 		contents.LogSearch(info)
 
 		warp.NewPrinter().PrintString(warp.ReportLogSearch(warp.LogSearchOutput))
 
+		if !printer.HasPrinted {
+			fmt.Println("No known issues found.")
+		}
 	},
 }
 
