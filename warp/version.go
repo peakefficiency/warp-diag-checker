@@ -202,7 +202,7 @@ func (info ParsedDiag) VersionCheck() (VersionCheckResult CheckResult, err error
 
 			if MacInstalled.LessThan(MacRelease) {
 				VersionCheckResult.CheckPass = false
-				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Latest Release version: %s Please update at %s", MacInstalled, MacRelease, MacReleaseURL)
+				VersionCheckResult.Evidence = fmt.Sprintf("installed version: %s, Latest Release version: %s Please update at %s", MacInstalled, MacRelease, MacDownloadURL)
 			}
 
 			if MacInstalled.GreaterThan(MacRelease) && MacInstalled.LessThan(MacBeta) {
