@@ -5,7 +5,7 @@ go 1.22.3
 require (
 	github.com/charmbracelet/glamour v0.7.0
 	github.com/hashicorp/go-version v1.7.0
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 	github.com/stretchr/testify v1.9.0
 	gopkg.in/yaml.v2 v2.4.0
 )
