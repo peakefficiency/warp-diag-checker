@@ -47,21 +47,6 @@ func (zipContent FileContentMap) DumpFiles(filename string) {
 
 }
 
-func (info ParsedDiag) ReportInfo() (string, error) {
-	var markdown strings.Builder
-
-	markdown.WriteString("## Warp Diag Information\n")
-
-	markdown.WriteString(fmt.Sprintf("* Name: %s\n", info.DiagName))
-	markdown.WriteString(fmt.Sprintf("* Platform: %s\n", info.PlatformType))
-
-	if wdc.Plain {
-		return markdown.String(), nil
-	}
-
-	return glamour.Render(markdown.String(), "dark")
-}
-
 func ReportLogSearch(results map[string]LogSearchResult) (string, error) {
 	var markdown strings.Builder
 

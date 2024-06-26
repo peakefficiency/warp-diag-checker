@@ -15,6 +15,14 @@ type ParsedDiag struct {
 	Settings         ParsedSettings
 	Account          ParsedAccount
 	Network          ParsedNetwork
+	PlatformDetails  PlatformDetails
+}
+
+type PlatformDetails struct {
+	OSversion   string
+	OSbuild     string
+	LinuxDistro string
+	LinuxKernel string
 }
 
 type ParsedAccount struct {
@@ -52,6 +60,8 @@ type ParsedSettings struct {
 	AllowModeSwitch       bool
 	AllowUpdates          bool
 	AllowLeaveOrg         bool
+	ProfileID             string
+	WarpTunnelProtocol    string
 }
 
 // Default values for struct fields
@@ -69,6 +79,15 @@ func NewParsedAccount() ParsedAccount {
 		PublicKey:    DefaultStringValue,
 		AccountID:    DefaultStringValue,
 		Organization: DefaultStringValue,
+	}
+}
+
+func NewPlatformDetails() PlatformDetails {
+	return PlatformDetails{
+		OSbuild:     DefaultStringValue,
+		OSversion:   DefaultStringValue,
+		LinuxDistro: DefaultStringValue,
+		LinuxKernel: DefaultStringValue,
 	}
 }
 
@@ -100,6 +119,8 @@ func NewParsedSettings() ParsedSettings {
 		AllowModeSwitch:       DefaultBoolValue,
 		AllowUpdates:          DefaultBoolValue,
 		AllowLeaveOrg:         DefaultBoolValue,
+		ProfileID:             DefaultStringValue,
+		WarpTunnelProtocol:    DefaultStringValue,
 	}
 }
 
@@ -115,6 +136,13 @@ func NewParsedDiag() ParsedDiag {
 	}
 }
 
+type SysInfo struct {
+	LongOsVersion  string `json:"long_os_version"`
+	OsVersion      string `json:"os_version"`
+	DistributionID string `json:"distribution_id"`
+	KernelVersion  string `json:"kernel_version"`
+}
+
 func (zipContent FileContentMap) GetInfo(zipPath string) (info ParsedDiag) {
 	info = NewParsedDiag() // Initialize with default values
 
@@ -123,7 +151,7 @@ func (zipContent FileContentMap) GetInfo(zipPath string) (info ParsedDiag) {
 	if content, ok := zipContent["platform.txt"]; ok {
 		info.PlatformType = strings.ToLower(string(content.Data))
 		if strings.Contains(info.PlatformType, "mac") {
-			info.PlatformType = "mac"
+			info.PlatformType = "mac" // this corrects instances where the platform type is macos causing issues on switch statements
 		}
 	}
 
@@ -133,24 +161,40 @@ func (zipContent FileContentMap) GetInfo(zipPath string) (info ParsedDiag) {
 		for _, line := range accountLines {
 
 			if strings.Contains(line, "Account type:") {
-				info.Account.AccountType = line
+				parts := strings.SplitN(line, ":", 3)
+				if len(parts) >= 2 {
+					info.Account.AccountType = strings.TrimSpace(parts[1])
+				}
 				continue
+
 			}
 			if strings.Contains(line, "Device ID:") {
-				info.Account.DeviceID = line
+				parts := strings.SplitN(line, ":", 3)
+				if len(parts) >= 2 {
+					info.Account.DeviceID = strings.TrimSpace(parts[1])
+				}
 				continue
 			}
 			if strings.Contains(line, "Public key:") {
-				info.Account.PublicKey = line
+				parts := strings.SplitN(line, ":", 3)
+				if len(parts) >= 2 {
+					info.Account.PublicKey = strings.TrimSpace(parts[1])
+				}
 				continue
 			}
 			if strings.Contains(line, "Account ID:") {
-				info.Account.AccountID = line
+				parts := strings.SplitN(line, ":", 3)
+				if len(parts) >= 2 {
+					info.Account.AccountID = strings.TrimSpace(parts[1])
+
+				}
 				continue
 			}
 			if strings.Contains(line, "Organization:") {
-				info.Account.Organization = line
-				continue
+				parts := strings.SplitN(line, ":", 3)
+				if len(parts) >= 2 {
+					info.Account.Organization = strings.TrimSpace(parts[1])
+				}
 			}
 		}
 	}
@@ -194,10 +238,29 @@ func (zipContent FileContentMap) GetInfo(zipPath string) (info ParsedDiag) {
 				continue
 			}
 			if strings.Contains(line, "Mode:") {
-				info.Settings.WarpMode = line
+				parts := strings.SplitN(line, ":", 3)
+				if len(parts) >= 2 {
+					info.Settings.WarpMode = strings.TrimSpace(parts[1])
+				}
 				continue
 			}
 
+			if strings.Contains(line, "Profile ID:") {
+				parts := strings.SplitN(line, ":", 3)
+				if len(parts) >= 2 {
+					info.Settings.ProfileID = strings.TrimSpace(parts[1])
+				}
+				continue
+
+			}
+			if strings.Contains(line, "WARP tunnel protocol:") {
+				parts := strings.SplitN(line, ":", 3)
+				if len(parts) >= 2 {
+					info.Settings.WarpTunnelProtocol = strings.TrimSpace(parts[1])
+				}
+				continue
+
+			}
 			if strings.Contains(line, "Disabled for Wifi:") {
 				if strings.Contains(line, "true") {
 					info.Settings.WiFiDisabled = true
@@ -344,5 +407,32 @@ func (zipContent FileContentMap) GetInfo(zipPath string) (info ParsedDiag) {
 
 	}
 
+	if content, ok := zipContent["sysinfo.json"]; ok {
+
+		var SysInfo SysInfo
+		switch info.PlatformType {
+		case "mac":
+
+			if err := json.Unmarshal(content.Data, &SysInfo); err == nil {
+				info.PlatformDetails.OSversion = SysInfo.LongOsVersion
+				info.PlatformDetails.OSbuild = SysInfo.OsVersion
+			}
+
+		case "windows":
+
+			if err := json.Unmarshal(content.Data, &SysInfo); err == nil {
+				info.PlatformDetails.OSversion = SysInfo.LongOsVersion
+				info.PlatformDetails.OSbuild = SysInfo.OsVersion
+			}
+
+		case "linux":
+
+			if err := json.Unmarshal(content.Data, &SysInfo); err == nil {
+				info.PlatformDetails.LinuxDistro = SysInfo.DistributionID
+				info.PlatformDetails.LinuxKernel = SysInfo.KernelVersion
+			}
+
+		}
+	}
 	return info
 }

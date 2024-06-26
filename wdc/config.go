@@ -15,7 +15,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-const AppVersion = "0.7.1"
+const AppVersion = "0.7.3"
 
 type Config struct {
 	ID   string

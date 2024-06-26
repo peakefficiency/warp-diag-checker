@@ -10,7 +10,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-type ParsedDiagInfo warp.ParsedDiag
+type ParsedDiagInfo struct {
+	warp.ParsedDiag
+}
 
 // infoCmd represents the info command
 var infoCmd = &cobra.Command{
@@ -30,9 +32,10 @@ var infoCmd = &cobra.Command{
 		if !wdc.Offline {
 			wdc.CheckForAppUpdate() // Check for application updates
 		}
-		info := contents.GetInfo(warp.ZipPath)
+		parsedDiag := contents.GetInfo(warp.ZipPath)
+		info := ParsedDiagInfo{ParsedDiag: parsedDiag} // wrapping to allow new methods to be added to the public  version
 
-		warp.NewPrinter().PrintString(info.ReportInfo())
+		warp.NewPrinter().PrintString(info.PublicReportInfo())
 
 	},
 }
@@ -53,13 +56,32 @@ func init() {
 	// infoCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
-func (info ParsedDiagInfo) ReportInfo() (string, error) {
+func (info ParsedDiagInfo) PublicReportInfo() (string, error) {
 	var markdown strings.Builder
 
 	markdown.WriteString("## Warp Diag Information\n")
 
 	markdown.WriteString(fmt.Sprintf("* Name: %s\n", info.DiagName))
 	markdown.WriteString(fmt.Sprintf("* Platform: %s\n", info.PlatformType))
+	switch info.PlatformType {
+	case "mac":
+		markdown.WriteString(fmt.Sprintf("* OS version: %s\n", info.PlatformDetails.OSversion))
+
+	case "windows":
+
+		markdown.WriteString(fmt.Sprintf("* OS version: %s\n", info.PlatformDetails.OSversion))
+		markdown.WriteString(fmt.Sprintf("* OS Build: %s\n", info.PlatformDetails.OSbuild))
+
+	case "linux":
+
+		markdown.WriteString(fmt.Sprintf("* Linux Distro: %s\n", info.PlatformDetails.LinuxDistro))
+		markdown.WriteString(fmt.Sprintf("* Linux Kernel: %s\n", info.PlatformDetails.LinuxKernel))
+	}
+	markdown.WriteString(fmt.Sprintf("* Installed version: %s\n", info.InstalledVersion))
+	markdown.WriteString(fmt.Sprintf("* Account ID: %s\n", info.Account.AccountID))
+	markdown.WriteString(fmt.Sprintf("* Team Name: %s\n", info.Account.Organization))
+
+	markdown.WriteString(fmt.Sprintf("* Device ID: %s\n", info.Account.DeviceID))
 
 	if wdc.Plain {
 		return markdown.String(), nil
