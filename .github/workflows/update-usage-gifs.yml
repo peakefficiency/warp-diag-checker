@@ -15,7 +15,8 @@ jobs:
       matrix:
         tape: ['list-usage.tape', 'dump-usage.tape', 'check-usage.tape', 'info-usage.tape']
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 
 
@@ -27,10 +28,14 @@ jobs:
       - name: Install warp-diag-checker
         run: go install github.com/peakefficiency/warp-diag-checker@latest
 
+      - name: Install VHS
+        run: |
+          curl -LO https://github.com/charmbracelet/vhs/releases/download/v0.7.2/vhs_0.7.2_Linux_x86_64.tar.gz
+          tar -xzf vhs_0.7.2_Linux_x86_64.tar.gz
+          sudo mv vhs /usr/local/bin
+
       - name: Generate GIF from tape
-        uses: charmbracelet/vhs-action@v1
-        with:
-          path: ${{ matrix.tape }}
+        run: vhs ${{ matrix.tape }}
 
       - name: Pull latest changes from the main branch
         run: git pull origin main
