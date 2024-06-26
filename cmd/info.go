@@ -59,6 +59,8 @@ func init() {
 func (info ParsedDiagInfo) PublicReportInfo() (string, error) {
 	var markdown strings.Builder
 
+	WarpProfileURL := fmt.Sprintf("https://one.dash.cloudflare.com/%s/settings/devices/profile-settings/%s", info.Account.AccountID, info.Settings.ProfileID)
+
 	markdown.WriteString("## Warp Diag Information\n")
 
 	markdown.WriteString(fmt.Sprintf("* Name: %s\n", info.DiagName))
@@ -82,10 +84,26 @@ func (info ParsedDiagInfo) PublicReportInfo() (string, error) {
 	markdown.WriteString(fmt.Sprintf("* Team Name: %s\n", info.Account.Organization))
 
 	markdown.WriteString(fmt.Sprintf("* Device ID: %s\n", info.Account.DeviceID))
+	markdown.WriteString(fmt.Sprintf("* Profile URL: %s", WarpProfileURL))
 
 	if wdc.Plain {
 		return markdown.String(), nil
 	}
 
-	return glamour.Render(markdown.String(), "dark")
+	// Define the rendering options with word wrapping
+	renderer, err := glamour.NewTermRenderer(
+		glamour.WithStandardStyle("dark"), // you can also use "light"
+		glamour.WithWordWrap(150),         // Specify the maximum line width for word wrapping
+	)
+	if err != nil {
+		return "", err
+	}
+
+	// Render the Markdown
+	output, err := renderer.Render(markdown.String())
+	if err != nil {
+		return "", err
+	}
+
+	return output, nil
 }
