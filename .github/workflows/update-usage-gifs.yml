@@ -29,19 +29,21 @@ jobs:
         run: go install github.com/peakefficiency/warp-diag-checker@latest
 
       - name: Install VHS
-        run: |
-          curl -LO https://github.com/charmbracelet/vhs/releases/download/v0.7.2/vhs_0.7.2_Linux_x86_64.tar.gz
-          tar -xzf vhs_0.7.2_Linux_x86_64.tar.gz
-          sudo mv vhs_0.7.2_Linux_x86_64/vhs /usr/local/bin
+        uses: charmbracelet/vhs-action@v1
+        with:
+          version: "latest"
 
       - name: Check VHS Installation
         run: |
-          which vhs
+          if ! command -v vhs &> /dev/null; then
+            echo "VHS installation failed"
+            exit 1
+          fi
           vhs --version
-          ls -al /usr/local/bin
 
       - name: Generate GIF from tape
         run: vhs ${{ matrix.tape }}
+        continue-on-error: true
 
       - name: Pull latest changes from the main branch
         run: git pull origin main
