@@ -65,7 +65,7 @@ log_patterns_by_issue:
 reply_by_issue_type:
   "Firewall":
     message: |
-      There May be a Firewall or service blocking required ports or performing TSL inspection.
+      There May be a Firewall or service blocking required ports or performing TLS inspection.
       Please verify all the required ports are unblocked https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/firewall/
   "VPN Application Found":
     message: |
