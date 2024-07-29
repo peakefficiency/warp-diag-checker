@@ -56,6 +56,7 @@ log_patterns_by_issue:
           - ExpressVPN
           - OpenFortiGUI
           - VPN.appex
+          - safervpn
   - search_file: connectivity.txt
     issue_type:
       "OS Firewall":
@@ -102,8 +103,9 @@ reply_by_issue_type:
       Please attempt to replicate the error using the latest available version according to the details below.
   "SPLITTUNNEL":
     message: |
-      The IP address assigned to the interface being used for the tunnel is not correctly excluded from the split tunnel configuration.
-      Please ensure this IP address (or range) is added to the split tunnel configuration for the warp profile used by this device.
+      The IP address assigned to the interface being used for the tunnel is not excluded from the split tunnel configuration.
+      This causes all the traffic to the local network to also flow through warp and thereby limit the speed to the max throughput of the internet connection.
+      If you are having LAN access speed issues or DHCP renewal issues, and you do not require the LAN traffic to flow through the warp tunnel it may be best to excluse the LAN range for the device.
       More details can be found at: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/private-net/connect-private-networks/#3-route-private-network-ips-through-warp"
   "EXCLUDE_EDITED":
     message: |
