@@ -51,19 +51,9 @@ brew upgrade warp-diag-checker
 
 ### Windows  
 
-To install on Windows via Chocolatey:
+Windows Chocolatey installation is no longer officially supported due to delays in approval from Chocolatey.
 
-[Requires Chocolatey](https://docs.chocolatey.org/en-us/choco/setup)
-
-```powershell {#install-choco}
-choco install warp-diag-checker
-```
-
-To update, run:
-
-```
-choco upgrade warp-diag-checker
-```
+Please use the Go install method instead:
 
 ### Install issues
 
