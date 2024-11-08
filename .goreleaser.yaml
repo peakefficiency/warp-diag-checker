@@ -15,7 +15,6 @@ builds:
     goos:
       - darwin
       - linux
-      - windows
     goarch:
       - amd64
       - arm
@@ -37,10 +36,6 @@ archives:
       {{- else if eq .Arch "386" }}i386
       {{- else }}{{ .Arch }}{{ end }}
       {{- if .Arm }}v{{ .Arm }}{{ end }}
-    # use zip for windows archives
-    format_overrides:
-      - goos: windows
-        format: zip
 
 checksum:
   name_template: "checksums.txt"
@@ -64,24 +59,3 @@ brews:
       owner: peakefficiency
       name: homebrew-releases
     caveats: "More information here: https://github.com/peakefficiency/warp-diag-checker"
-
-chocolateys:
-  - name: warp-diag-checker
-    owners: eprosimon
-    authors: Peak Efficiency
-    project_url: https://github.com/peakefficiency/warp-diag-checker
-    icon_url: "https://raw.githubusercontent.com/peakefficiency/warp-diag-checker/main/assets/icon.png"
-    license_url: https://github.com/peakefficiency/warp-diag-checker/blob/main/LICENSE
-    package_source_url: https://github.com/peakefficiency/warp-diag-checker
-    docs_url: https://github.com/peakefficiency/warp-diag-checker/blob/main/README.md
-    bug_tracker_url: https://github.com/peakefficiency/warp-diag-checker/issues
-    tags: "network diagnostics warp cloudflare"
-    summary: Warp Diagnostics Checker
-    description: |
-      Warp Diagnostics Checker is a simple tool to check for known warp issues.
-      It helps diagnose common problems and provides helpful information to resolve them.
-    release_notes: "https://github.com/peakefficiency/warp-diag-checker/releases/tag/{{ .Version }}"
-    api_key: "{{ .Env.CHOCOLATEY_API_KEY }}"
-    source_repo: "https://push.chocolatey.org/"
-    skip_publish: false
-# ... (other config sections)
