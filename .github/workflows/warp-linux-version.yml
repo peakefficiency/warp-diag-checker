@@ -18,12 +18,51 @@ jobs:
       - name: Fetch WARP Package Details
         id: fetch_package_details
         run: |
-          curl -fsSL https://pkg.cloudflareclient.com/dists/jammy/main/binary-amd64/Packages -o packages.txt
+          echo "Fetching Linux package details from Cloudflare repository..."
+          if ! curl -fsSL https://pkg.cloudflareclient.com/dists/jammy/main/binary-amd64/Packages -o packages.txt; then
+            echo "::error::Failed to download package details from Cloudflare repository"
+            exit 1
+          fi
+          
+          if [ ! -s packages.txt ]; then
+            echo "::error::Downloaded package file is empty"
+            exit 1
+          fi
+          echo "Package details downloaded successfully"
+
+      - name: Validate Package Details
+        id: validate_package
+        run: |
+          if ! grep -q "Package: cloudflare-warp" packages.txt; then
+            echo "::error::Package 'cloudflare-warp' not found in repository"
+            cat packages.txt | head -20
+            exit 1
+          fi
+          
+          if ! grep -q "Version:" packages.txt; then
+            echo "::error::Version information not found in package details"
+            cat packages.txt | head -20
+            exit 1
+          fi
+          echo "Package details validated successfully"
 
       - name: Extract WARP Version
         id: extract_version
         run: |
           VERSION=$(grep 'Version' packages.txt | head -1 | cut -d ' ' -f 2)
+          
+          if [[ -z "$VERSION" ]]; then
+            echo "::error::Failed to extract version from package details"
+            grep 'Version' packages.txt || echo "No Version line found"
+            exit 1
+          fi
+          
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Invalid version format: $VERSION (expected format: X.X.X.X)"
+            exit 1
+          fi
+          
+          echo "Linux WARP version: $VERSION"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
 
@@ -31,11 +70,42 @@ jobs:
     needs: upload-linux-version
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Cloudflare KV
+      - name: Deploy to Cloudflare KV with retry
         uses: cloudflare/wrangler-action@v3
+        id: deploy-linux
+        continue-on-error: true
         with:
           apiToken: ${{ secrets.CF_API_KV_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           command: kv:key put --namespace-id=${{ secrets.KV_NAMESPACE_ID }} "linux-version" "${{ needs.upload-linux-version.outputs.warp_version }}"
+
+      - name: Retry deployment (1st attempt)
+        uses: cloudflare/wrangler-action@v3
+        id: retry-linux-1
+        if: steps.deploy-linux.outcome == 'failure'
+        continue-on-error: true
+        with:
+          apiToken: ${{ secrets.CF_API_KV_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: kv:key put --namespace-id=${{ secrets.KV_NAMESPACE_ID }} "linux-version" "${{ needs.upload-linux-version.outputs.warp_version }}"
+
+      - name: Retry deployment (2nd attempt)
+        uses: cloudflare/wrangler-action@v3
+        id: retry-linux-2
+        if: steps.retry-linux-1.outcome == 'failure'
+        with:
+          apiToken: ${{ secrets.CF_API_KV_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: kv:key put --namespace-id=${{ secrets.KV_NAMESPACE_ID }} "linux-version" "${{ needs.upload-linux-version.outputs.warp_version }}"
+
+      - name: Log deployment status
+        run: |
+          echo "First attempt: ${{ steps.deploy-linux.outcome }}"
+          if [ "${{ steps.retry-linux-1.outcome }}" != "" ]; then
+            echo "Second attempt: ${{ steps.retry-linux-1.outcome }}"
+          fi
+          if [ "${{ steps.retry-linux-2.outcome }}" != "" ]; then
+            echo "Third attempt: ${{ steps.retry-linux-2.outcome }}"
+          fi
 
 
