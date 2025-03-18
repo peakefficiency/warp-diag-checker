@@ -19,7 +19,7 @@ jobs:
         id: fetch_release_json
         run: |
           echo "Fetching Windows Release version from Cloudflare API..."
-          RESPONSE=$(curl -sSL "https://downloads.cloudflareclient.com/v1/update/json/windows/ga")
+          RESPONSE=$(curl -sSL --max-time 30 "https://downloads.cloudflareclient.com/v1/update/json/windows/ga")
           echo "API response received"
           echo "$RESPONSE" > windows_release.json
           if ! jq empty windows_release.json 2>/dev/null; then
@@ -60,7 +60,7 @@ jobs:
         id: fetch_beta_json
         run: |
           echo "Fetching Windows Beta version from Cloudflare API..."
-          RESPONSE=$(curl -sSL "https://downloads.cloudflareclient.com/v1/update/json/windows/beta")
+          RESPONSE=$(curl -sSL --max-time 30 "https://downloads.cloudflareclient.com/v1/update/json/windows/beta")
           echo "API response received"
           echo "$RESPONSE" > windows_beta.json
           if ! jq empty windows_beta.json 2>/dev/null; then

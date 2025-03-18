@@ -19,7 +19,7 @@ jobs:
         id: fetch_release_json
         run: |
           echo "Fetching macOS Release version from Cloudflare API..."
-          RESPONSE=$(curl -sSL "https://downloads.cloudflareclient.com/v1/update/json/macos/ga")
+          RESPONSE=$(curl -sSL --max-time 30 "https://downloads.cloudflareclient.com/v1/update/json/macos/ga")
           echo "API response received"
           echo "$RESPONSE" > macos_release.json
           if ! jq empty macos_release.json 2>/dev/null; then
@@ -60,7 +60,7 @@ jobs:
         id: fetch_beta_json
         run: |
           echo "Fetching macOS Beta version from Cloudflare API..."
-          RESPONSE=$(curl -sSL "https://downloads.cloudflareclient.com/v1/update/json/macos/beta")
+          RESPONSE=$(curl -sSL --max-time 30 "https://downloads.cloudflareclient.com/v1/update/json/macos/beta")
           echo "API response received"
           echo "$RESPONSE" > macos_beta.json
           if ! jq empty macos_beta.json 2>/dev/null; then

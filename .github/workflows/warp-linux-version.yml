@@ -19,7 +19,7 @@ jobs:
         id: fetch_package_details
         run: |
           echo "Fetching Linux package details from Cloudflare repository..."
-          if ! curl -fsSL https://pkg.cloudflareclient.com/dists/jammy/main/binary-amd64/Packages -o packages.txt; then
+          if ! curl -fsSL --max-time 30 https://pkg.cloudflareclient.com/dists/jammy/main/binary-amd64/Packages -o packages.txt; then
             echo "::error::Failed to download package details from Cloudflare repository"
             exit 1
           fi
