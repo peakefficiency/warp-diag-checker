@@ -16,10 +16,10 @@ const (
 	MacReleaseURL          = "https://warp-diag-checker.pages.dev/api/warp-version/mac-release"
 	MacBetaURL             = "https://warp-diag-checker.pages.dev/api/warp-version/mac-beta"
 	LinuxVersionURL        = "https://warp-diag-checker.pages.dev/api/warp-version/linux"
-	WindowsDownloadURL     = "https://install.appcenter.ms/orgs/cloudflare/apps/1.1.1.1-windows-1/distribution_groups/release"
-	WindowsBetaDownloadURL = "https://install.appcenter.ms/orgs/cloudflare/apps/1.1.1.1-windows/distribution_groups/beta"
-	MacDownloadURL         = "https://install.appcenter.ms/orgs/cloudflare/apps/1.1.1.1-macos-1/distribution_groups/release"
-	MacBetaDownloadURL     = "https://install.appcenter.ms/orgs/cloudflare/apps/1.1.1.1-macos/distribution_groups/beta"
+	WindowsDownloadURL     = "https://downloads.cloudflareclient.com/v1/download/windows/ga"
+	WindowsBetaDownloadURL = "https://downloads.cloudflareclient.com/v1/download/windows/beta"
+	MacDownloadURL         = "https://downloads.cloudflareclient.com/v1/download/macos/ga"
+	MacBetaDownloadURL     = "https://downloads.cloudflareclient.com/v1/download/macos/beta"
 	LinuxPKGurl            = "https://pkg.cloudflareclient.com/"
 )
 

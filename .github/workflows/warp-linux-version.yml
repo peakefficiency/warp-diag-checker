@@ -23,7 +23,7 @@ jobs:
       - name: Extract WARP Version
         id: extract_version
         run: |
-          VERSION=$(grep 'Version' packages.txt | cut -d ' ' -f 2)
+          VERSION=$(grep 'Version' packages.txt | head -1 | cut -d ' ' -f 2)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
 

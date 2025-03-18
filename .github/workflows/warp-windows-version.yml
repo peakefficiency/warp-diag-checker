@@ -18,13 +18,13 @@ jobs:
       - name: Fetch WARP Windows Release Version
         id: extract_release_version
         run: |
-          RELEASE_VERSION=$(curl -fsSl "https://install.appcenter.ms/api/v0.1/apps/cloudflare/1.1.1.1-windows-1/distribution_groups/release/public_releases" | jq -r '.[0].version')
+          RELEASE_VERSION=$(curl -fsSl "https://downloads.cloudflareclient.com/v1/update/json/windows/ga" | jq -r '.items[0].version')
           echo "version=$RELEASE_VERSION" >> $GITHUB_OUTPUT
 
       - name: Fetch WARP Windows Beta Version
         id: extract_beta_version
         run: |
-          BETA_VERSION=$(curl -fsSl "https://install.appcenter.ms/api/v0.1/apps/cloudflare/1.1.1.1-windows/distribution_groups/beta/public_releases" | jq -r '.[0].version')
+          BETA_VERSION=$(curl -fsSl "https://downloads.cloudflareclient.com/v1/update/json/windows/beta" | jq -r '.items[0].version')
           echo "version=$BETA_VERSION" >> $GITHUB_OUTPUT
 
   deploy-release-version:

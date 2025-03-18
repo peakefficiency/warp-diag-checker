@@ -18,13 +18,13 @@ jobs:
       - name: Fetch WARP Mac Release Version
         id: extract_release_version
         run: |
-          RELEASE_VERSION=$(curl -fsSl "https://install.appcenter.ms/api/v0.1/apps/cloudflare/1.1.1.1-macos-1/distribution_groups/release/public_releases" | jq -r '.[0].short_version')
+          RELEASE_VERSION=$(curl -fsSl "https://downloads.cloudflareclient.com/v1/update/json/macos/ga" | jq -r '.items[0].version')
           echo "version=$RELEASE_VERSION" >> $GITHUB_OUTPUT
 
       - name: Fetch WARP Mac Beta Version
         id: extract_beta_version
         run: |
-          BETA_VERSION=$(curl -fsSl "https://install.appcenter.ms/api/v0.1/apps/cloudflare/1.1.1.1-macos/distribution_groups/beta/public_releases" | jq -r '.[0].short_version')
+          BETA_VERSION=$(curl -fsSl "https://downloads.cloudflareclient.com/v1/update/json/macos/beta" | jq -r '.items[0].version')
           echo "version=$BETA_VERSION" >> $GITHUB_OUTPUT
 
   deploy-release-version:
