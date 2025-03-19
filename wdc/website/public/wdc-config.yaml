@@ -1,5 +1,5 @@
 config_version: 0.5.0
-wdc_latest_version: 0.7.3
+wdc_latest_version: 0.7.5
 wdd_latest_version: 1.0.5
 bad_versions:
   - 2022.12.475.0
