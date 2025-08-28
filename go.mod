@@ -1,13 +1,14 @@
 module github.com/peakefficiency/warp-diag-checker
 
-go 1.22.3
+go 1.23.0
+
 toolchain go1.24.1
 
 require (
 	github.com/charmbracelet/glamour v0.9.1
 	github.com/hashicorp/go-version v1.7.0
 	github.com/spf13/cobra v1.9.1
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.1
 	gopkg.in/yaml.v2 v2.4.0
 )
 
